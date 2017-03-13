@@ -1,0 +1,4206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>avata</key>
+		<string>avatacontract.png</string>
+		<key>name</key>
+		<string>Contracts</string>
+		<key>vocabulary</key>
+		<string>1.vcontracts</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/01%20Contracts.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Who is talking?</string>
+					<key>A</key>
+					<string>A lawyer</string>
+					<key>B</key>
+					<string>An upset signer of the contract</string>
+					<key>C</key>
+					<string>A secretary</string>
+					<key>D</key>
+					<string>Someone who has canceled his agreement</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Which part of the contract are they looking at?</string>
+					<key>A</key>
+					<string>A cancellation clause</string>
+					<key>B</key>
+					<string>The assurance of quality</string>
+					<key>C</key>
+					<string>The agreement on payment</string>
+					<key>D</key>
+					<string>A provision in case of bankruptcy</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>When can the parties sign the contract?</string>
+					<key>A</key>
+					<string>In two days</string>
+					<key>B</key>
+					<string>At the end of the week</string>
+					<key>C</key>
+					<string>Next week</string>
+					<key>D</key>
+					<string>In thirty days</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What problem do the speakers have with the computer company?</string>
+					<key>A</key>
+					<string>It won’t renew the contract</string>
+					<key>B</key>
+					<string>It can’t repair the computer</string>
+					<key>C</key>
+					<string>It sends incorrect bills</string>
+					<key>D</key>
+					<string>It charges them for extra spare parts</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>When will the contract run out?</string>
+					<key>A</key>
+					<string>In two months</string>
+					<key>B</key>
+					<string>In nine months</string>
+					<key>C</key>
+					<string>In one year</string>
+					<key>D</key>
+					<string>In four years</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What does the woman suggest doing?</string>
+					<key>A</key>
+					<string>Asking the company to write a new contract</string>
+					<key>B</key>
+					<string>Canceling the contract</string>
+					<key>C</key>
+					<string>Renewing the contract</string>
+					<key>D</key>
+					<string>Waiting until the contract runs out</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>A</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>image</key>
+				<string>contracts.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>The two sides were on closer to a final ___at midnight then they were at noon.</string>
+				<key>A</key>
+				<string>agreement</string>
+				<key>B</key>
+				<string>agreeable</string>
+				<key>C</key>
+				<string>agree</string>
+				<key>D</key>
+				<string>agreed</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Our onion representative ___ members that our rights would be defended</string>
+				<key>A</key>
+				<string>assured</string>
+				<key>B</key>
+				<string>assurance</string>
+				<key>C</key>
+				<string>assuredly</string>
+				<key>D</key>
+				<string>assure</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>If you ___ your reservation 48 hours in advance, you will not be billed</string>
+				<key>A</key>
+				<string>will cancel</string>
+				<key>B</key>
+				<string>cancel</string>
+				<key>C</key>
+				<string>cancellation</string>
+				<key>D</key>
+				<string>canceled</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>I don’t feel any ___ to give my boss more than two weeks notice when I leave</string>
+				<key>A</key>
+				<string>oblige</string>
+				<key>B</key>
+				<string>obligatory</string>
+				<key>C</key>
+				<string>obliged</string>
+				<key>D</key>
+				<string>obligation</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The ___ for terminating the contract were not discussed</string>
+				<key>A</key>
+				<string>provide</string>
+				<key>B</key>
+				<string>provisions</string>
+				<key>C</key>
+				<string>provider</string>
+				<key>D</key>
+				<string>provisioning</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>The contract calls for the union to ___ who their bargaining representative will be.</string>
+				<key>A</key>
+				<string>specific</string>
+				<key>B</key>
+				<string>specification</string>
+				<key>C</key>
+				<string>specifying</string>
+				<key>D</key>
+				<string>specify</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>1.rcontracts</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What is the purpose of the letter?</string>
+					<key>A</key>
+					<string>To find out why Mr.Harrison no longer wants this service</string>
+					<key>B</key>
+					<string>To ask Mr.Harrison to renew his contract</string>
+					<key>C</key>
+					<string>To advertise new services provided by the company</string>
+					<key>D</key>
+					<string>To offer the customer a better contract</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is Ms.Santos’s business?</string>
+					<key>A</key>
+					<string>Customer relations</string>
+					<key>B</key>
+					<string>Cleaning service</string>
+					<key>C</key>
+					<string>Contract renew</string>
+					<key>D</key>
+					<string>Conflict resolution</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Why did this customer cancel the contract?</string>
+					<key>A</key>
+					<string>The company damaged something in his office</string>
+					<key>B</key>
+					<string>The employees provided unsatisfactory</string>
+					<key>C</key>
+					<string>He had a disagreement about his bill</string>
+					<key>D</key>
+					<string>He doesn’t want this type of service anymore</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word assure in letter one, line 2 is closest in meaning to </string>
+					<key>A</key>
+					<string>guarantee</string>
+					<key>B</key>
+					<string>discover</string>
+					<key>C</key>
+					<string>prove</string>
+					<key>D</key>
+					<string>advertise</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The word specific in form 2, line 15 is closest in meaning to</string>
+					<key>A</key>
+					<string>Personal</string>
+					<key>B</key>
+					<string>Important</string>
+					<key>C</key>
+					<string>Repeated</string>
+					<key>D</key>
+					<string>particular</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatamarketing.png</string>
+		<key>name</key>
+		<string>Maketing</string>
+		<key>vocabulary</key>
+		<string>2.vmarketing</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/02%20Marketing.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Who would listen to this talk?</string>
+					<key>A</key>
+					<string>Customers</string>
+					<key>B</key>
+					<string>Competitors</string>
+					<key>C</key>
+					<string>Students</string>
+					<key>D</key>
+					<string>Salespeople</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What are they trying to identify?</string>
+					<key>A</key>
+					<string>Their weaknesses</string>
+					<key>B</key>
+					<string>How to price their service</string>
+					<key>C</key>
+					<string>Their strong points</string>
+					<key>D</key>
+					<string>Who the competition is</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>Where will the listeners be this afternoon?</string>
+					<key>A</key>
+					<string>At home</string>
+					<key>B</key>
+					<string>In a workshop</string>
+					<key>C</key>
+					<string>At a store</string>
+					<key>D</key>
+					<string>With a client</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Why does the store need to be more competitive?</string>
+					<key>A</key>
+					<string>There’s currently a recession</string>
+					<key>B</key>
+					<string>productively has dropped lately</string>
+					<key>C</key>
+					<string>There’s a new competitor nearby</string>
+					<key>D</key>
+					<string>new employees have little experience</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>How will the store attract more customers?</string>
+					<key>A</key>
+					<string>by giving them trial products</string>
+					<key>B</key>
+					<string>by giving them discounts</string>
+					<key>C</key>
+					<string>by selling new products</string>
+					<key>D</key>
+					<string>by featuring happy customers in ads</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Who will the woman call?</string>
+					<key>A</key>
+					<string>a photographer</string>
+					<key>B</key>
+					<string>a photocopy salesperson</string>
+					<key>C</key>
+					<string>a customer</string>
+					<key>D</key>
+					<string>a marketing executive</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>B</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>marketing.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>Marketing specialists have conducted extensive studies of what ___ customers to a particular product.</string>
+				<key>A</key>
+				<string>Attractive</string>
+				<key>B</key>
+				<string>Attraction</string>
+				<key>C</key>
+				<string>Attracts</string>
+				<key>D</key>
+				<string>Attracting</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Smart shoppers will ___ similar brands of an item before marking a decision</string>
+				<key>A</key>
+				<string>Compare</string>
+				<key>B</key>
+				<string>Comparison</string>
+				<key>C</key>
+				<string>Comparative</string>
+				<key>D</key>
+				<string>Comparable</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>If our work isn’t to your ___,please notify us within 60 days</string>
+				<key>A</key>
+				<string>Satisfy</string>
+				<key>B</key>
+				<string>Satisfactory</string>
+				<key>C</key>
+				<string>Satisfaction</string>
+				<key>D</key>
+				<string>Satisfied</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Manufacturers like to know what features ___ find useful</string>
+				<key>A</key>
+				<string>Consumers</string>
+				<key>B</key>
+				<string>Consume</string>
+				<key>C</key>
+				<string>Consumption</string>
+				<key>D</key>
+				<string>Consumable</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>Without good___, good products can go unsold.</string>
+				<key>A</key>
+				<string>Market</string>
+				<key>B</key>
+				<string>Marketable</string>
+				<key>C</key>
+				<string>Marketed</string>
+				<key>D</key>
+				<string>Marketing</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>A careful analysis of the ___ product on the market indicated that our product lacked innovation and optional features.</string>
+				<key>A</key>
+				<string>Compete</string>
+				<key>B</key>
+				<string>Competing</string>
+				<key>C</key>
+				<string>Competed</string>
+				<key>D</key>
+				<string>competition</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>2.rmarketing</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>When did the sales department have a meeting?</string>
+					<key>A</key>
+					<string>at the beginning of the year</string>
+					<key>B</key>
+					<string>in March</string>
+					<key>C</key>
+					<string>a quarter of a year ago</string>
+					<key>D</key>
+					<string>at the end of last year</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Which of the following might be part of the Catherine’s Curls line of product?</string>
+					<key>A</key>
+					<string>Shampoo</string>
+					<key>B</key>
+					<string>Hand lotion</string>
+					<key>C</key>
+					<string>Nail polish</string>
+					<key>D</key>
+					<string>Lipstick</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>according to the report, why are fewer people buying Catherine’s Curls product?</string>
+					<key>A</key>
+					<string>The prices are too high</string>
+					<key>B</key>
+					<string>The ingredients aren’t natural</string>
+					<key>C</key>
+					<string>The packages aren’t attractive</string>
+					<key>D</key>
+					<string> The type of product is not popular</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The word market in line 5 is closest in meaning to</string>
+					<key>A</key>
+					<string>product</string>
+					<key>B</key>
+					<string>factory</string>
+					<key>C</key>
+					<string>purchase</string>
+					<key>D</key>
+					<string>demand</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The word fad in line 8 closest in meaning to</string>
+					<key>A</key>
+					<string>need</string>
+					<key>B</key>
+					<string>fashion</string>
+					<key>C</key>
+					<string>event</string>
+					<key>D</key>
+					<string>wish</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatawarranties.png</string>
+		<key>name</key>
+		<string>Warranties</string>
+		<key>vocabulary</key>
+		<string>3.vwarranty</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/03%20Warrenties.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is the point of the talk?</string>
+					<key>A</key>
+					<string>Items under warranty must be fixed</string>
+					<key>B</key>
+					<string>If an item is misused, the warranty may be invalidated</string>
+					<key>C</key>
+					<string>Machines with unusual wear are difficult to repair</string>
+					<key>D</key>
+					<string>Customers often don’t understand warranties</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Who is the audience for this talk?</string>
+					<key>A</key>
+					<string>A factory repairperson</string>
+					<key>B</key>
+					<string>A customer</string>
+					<key>C</key>
+					<string>Someone who rents machines</string>
+					<key>D</key>
+					<string>Buyers</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>How can a customer receive money back for a defective product?</string>
+					<key>A</key>
+					<string>Follow the directions on the package</string>
+					<key>B</key>
+					<string>Return it to the place of purchase</string>
+					<key>C</key>
+					<string>Repackage it carefully</string>
+					<key>D</key>
+					<string>Return it within 30days</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>How long is the basic warranty affective?</string>
+					<key>A</key>
+					<string>Thirty days</string>
+					<key>B</key>
+					<string>sixty days</string>
+					<key>C</key>
+					<string>One year</string>
+					<key>D</key>
+					<string>Two years</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What will happen if the woman uses an unapproved mechanic?</string>
+					<key>A</key>
+					<string>There are no consequences</string>
+					<key>B</key>
+					<string>The warranty is no longer effective</string>
+					<key>C</key>
+					<string>Protection is decreased by 50%</string>
+					<key>D</key>
+					<string>She will have full coverage</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What does the woman decide to do?</string>
+					<key>A</key>
+					<string>Take her car to an approved mechanic</string>
+					<key>B</key>
+					<string>Buy the extended warranty</string>
+					<key>C</key>
+					<string>Refuse the basic warranty</string>
+					<key>D</key>
+					<string>Buy a difference car</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>A</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>warranties.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>The timing belt ___ shows signs of wear after about 180,000 miles</string>
+				<key>A</key>
+				<string>character</string>
+				<key>B</key>
+				<string>characteristic</string>
+				<key>C</key>
+				<string>characterise</string>
+				<key>D</key>
+				<string>characteristically</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>Jacques and Louisa will only ___ purchasing appliances that come with a money back guarantee</string>
+				<key>A</key>
+				<string>consideration</string>
+				<key>B</key>
+				<string>consider</string>
+				<key>C</key>
+				<string>considering</string>
+				<key>D</key>
+				<string>considerable</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>If there is any ___ of the director’s involvement, we need to follow up swiftly and thoroughly</string>
+				<key>A</key>
+				<string>imply</string>
+				<key>B</key>
+				<string>implicit</string>
+				<key>C</key>
+				<string>implicated</string>
+				<key>D</key>
+				<string>implication</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>The level of ___ implied by the warranty was misleading</string>
+				<key>A</key>
+				<string>protect</string>
+				<key>B</key>
+				<string>protective</string>
+				<key>C</key>
+				<string>protection</string>
+				<key>D</key>
+				<string>protector</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>It can be very helpful to consider the ___ of the manufacturer and the merchant when making a major purchase</string>
+				<key>A</key>
+				<string>reputation</string>
+				<key>B</key>
+				<string>reputable</string>
+				<key>C</key>
+				<string>reputing</string>
+				<key>D</key>
+				<string>reputed</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>If the appliance breaks down within two years of purchase, the manufacturer is ___ to send you a replacement at no charge</string>
+				<key>A</key>
+				<string>requiring</string>
+				<key>B</key>
+				<string>requisite</string>
+				<key>C</key>
+				<string>requirement</string>
+				<key>D</key>
+				<string>required</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>3.rwarranty</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Why did the customer return the toaster?</string>
+					<key>A</key>
+					<string>it doesn’t work</string>
+					<key>B</key>
+					<string>It was too expensive</string>
+					<key>C</key>
+					<string>she wants a brand new one</string>
+					<key>D</key>
+					<string>she prefers a different model</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>When did she purchase the toaster?</string>
+					<key>A</key>
+					<string>A month ago</string>
+					<key>B</key>
+					<string>Last October</string>
+					<key>C</key>
+					<string>Exactly one year ago</string>
+					<key>D</key>
+					<string>A little over a year ago</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What will she get in place of the returned toaster?</string>
+					<key>A</key>
+					<string>Nothing</string>
+					<key>B</key>
+					<string>A refund</string>
+					<key>C</key>
+					<string>A brand new toaster</string>
+					<key>D</key>
+					<string>A different, repaired toaster</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The word considering in the line 4 of the second letter is closest in meaning to</string>
+					<key>A</key>
+					<string>reading about</string>
+					<key>B</key>
+					<string>thinking about</string>
+					<key>C</key>
+					<string>talking about</string>
+					<key>D</key>
+					<string>worrying about</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word frequently in line 6 of the second letter is closest in meaning to</string>
+					<key>A</key>
+					<string>often</string>
+					<key>B</key>
+					<string>rarely</string>
+					<key>C</key>
+					<string>never</string>
+					<key>D</key>
+					<string>occasionally</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatabusinessplaning.png</string>
+		<key>name</key>
+		<string>Business Planning</string>
+		<key>vocabulary</key>
+		<string>4.vbusinessplan</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/04%20Planning.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is the topic of the talk?</string>
+					<key>A</key>
+					<string>Long term growth plans</string>
+					<key>B</key>
+					<string>An offer for a leveraged buyout</string>
+					<key>C</key>
+					<string>How to minimise risk</string>
+					<key>D</key>
+					<string>Where to borrow funds</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How will the company fund it’s growth?</string>
+					<key>A</key>
+					<string>Bank loans</string>
+					<key>B</key>
+					<string>Profits</string>
+					<key>C</key>
+					<string>sale of stocks</string>
+					<key>D</key>
+					<string>Owner investment</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>When will the evaluation begin?</string>
+					<key>A</key>
+					<string>At the end of this year</string>
+					<key>B</key>
+					<string>At the beginning of next year</string>
+					<key>C</key>
+					<string>In two years</string>
+					<key>D</key>
+					<string>In a few years</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>How do the speakers feel about alexa’s business plan?</string>
+					<key>A</key>
+					<string>She has gathered too much data</string>
+					<key>B</key>
+					<string>She has taken on too much risk</string>
+					<key>C</key>
+					<string>She has made many obvious mistakes</string>
+					<key>D</key>
+					<string>She is serious minded and cautious</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How will the man help Alexa?</string>
+					<key>A</key>
+					<string>By doing market research</string>
+					<key>B</key>
+					<string>By searching for an office</string>
+					<key>C</key>
+					<string>By pointing out her mistakes</string>
+					<key>D</key>
+					<string>By nominating her for an award</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>According to the man, what is the most important strategy for success?</string>
+					<key>A</key>
+					<string>Investing in a good sound system</string>
+					<key>B</key>
+					<string>Having a good business plan</string>
+					<key>C</key>
+					<string>Eliminating all risk</string>
+					<key>D</key>
+					<string>Studying the market</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>B</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>image</key>
+				<string>businessplaning.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>You can not ____ learning how to use the new software as it will be needed in daily operations from now on</string>
+				<key>A</key>
+				<string>avoid</string>
+				<key>B</key>
+				<string>avoided</string>
+				<key>C</key>
+				<string>avoiding</string>
+				<key>D</key>
+				<string>avoidance</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>I don’t want to intrude, but would you like me to ___ how to use that machine?</string>
+				<key>A</key>
+				<string>demonstrate</string>
+				<key>B</key>
+				<string>demonstration</string>
+				<key>C</key>
+				<string>demonstrative</string>
+				<key>D</key>
+				<string>demonstrator</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>While you are ___ your business plan. It’s a good idea to keep a resource library of valuable materials.</string>
+				<key>A</key>
+				<string>develop</string>
+				<key>B</key>
+				<string>development</string>
+				<key>C</key>
+				<string>developing</string>
+				<key>D</key>
+				<string>developer</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>After you turn in your business plan, you will receive a written ___ of  your work within two weeks</string>
+				<key>A</key>
+				<string>evaluator</string>
+				<key>B</key>
+				<string>evaluative</string>
+				<key>C</key>
+				<string>evaluate</string>
+				<key>D</key>
+				<string>evaluation</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>If we think ____.we can come up with a plan that  promised success</string>
+				<key>A</key>
+				<string>strategise</string>
+				<key>B</key>
+				<string>strategic</string>
+				<key>C</key>
+				<string>strategically</string>
+				<key>D</key>
+				<string>strategist</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>It is now legal to ___ a generic brand drug for a prescription medicine if you have the parient’s consent</string>
+				<key>A</key>
+				<string>substitute</string>
+				<key>B</key>
+				<string>substituted</string>
+				<key>C</key>
+				<string>substituting</string>
+				<key>D</key>
+				<string>substitution</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>4.rbusinessplaning</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What is this article mostly about?</string>
+					<key>A</key>
+					<string>Financing new business</string>
+					<key>B</key>
+					<string>How to price products</string>
+					<key>C</key>
+					<string>The need for research </string>
+					<key>D</key>
+					<string>The best marketing strategies</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What does the author say about risk?</string>
+					<key>A</key>
+					<string>We should try to reduce it</string>
+					<key>B</key>
+					<string>We must avoid it</string>
+					<key>C</key>
+					<string>We can eliminate it with careful planing</string>
+					<key>D</key>
+					<string>It is the key to success</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>According to the article, what can lead to the failure of a new business?</string>
+					<key>A</key>
+					<string>Offering a cheaper product</string>
+					<key>B</key>
+					<string>Selling the exact same product at the competitors sell</string>
+					<key>C</key>
+					<string>Selling only to a niche in the market</string>
+					<key>D</key>
+					<string>Offering only services and not products </string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word Addressing  in line 13 is closest in meaning to</string>
+					<key>A</key>
+					<string>focusing on</string>
+					<key>B</key>
+					<string>calling on</string>
+					<key>C</key>
+					<string>giving up</string>
+					<key>D</key>
+					<string>staying away from</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The word demonstrate in line 6  is closest in meaning to</string>
+					<key>A</key>
+					<string>feel</string>
+					<key>B</key>
+					<string>create</string>
+					<key>C</key>
+					<string>remove</string>
+					<key>D</key>
+					<string>show</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avataconferences.png</string>
+		<key>name</key>
+		<string>Conferences</string>
+		<key>vocabulary</key>
+		<string>5.vconferences</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/05%20Conferences.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What is the topic of the talk?</string>
+					<key>A</key>
+					<string>Accommodating disabled people</string>
+					<key>B</key>
+					<string>Legal responsibility for off site events</string>
+					<key>C</key>
+					<string>arranging conferences</string>
+					<key>D</key>
+					<string>Preparing convention catalogs</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Where are the speakers?</string>
+					<key>A</key>
+					<string>In a hospital</string>
+					<key>B</key>
+					<string>Off site</string>
+					<key>C</key>
+					<string>At a party</string>
+					<key>D</key>
+					<string>at a convention center</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How should attendees request a special interpreter?</string>
+					<key>A</key>
+					<string>By asking for one at the time of registration</string>
+					<key>B</key>
+					<string>By getting in touch with the head of the facility</string>
+					<key>C</key>
+					<string>By registering ahead of the other attendees</string>
+					<key>D</key>
+					<string>By requesting one when they arrive at a session</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Why are they having difficulty arranging a site for the conference?</string>
+					<key>A</key>
+					<string>It’s a busy time of year</string>
+					<key>B</key>
+					<string>They procrastinated</string>
+					<key>C</key>
+					<string>Their group is large</string>
+					<key>D</key>
+					<string>The coordinator has been sick</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>When will the conference take place?</string>
+					<key>A</key>
+					<string>At the end of this month</string>
+					<key>B</key>
+					<string>Next month</string>
+					<key>C</key>
+					<string>At the end of this year</string>
+					<key>D</key>
+					<string>Next year</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>How many people do they expect at the conference?</string>
+					<key>A</key>
+					<string>Two hundred</string>
+					<key>B</key>
+					<string>Four hundred</string>
+					<key>C</key>
+					<string>Five hundred</string>
+					<key>D</key>
+					<string>Ten hundred</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>B</string>
+				<string>B</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>image</key>
+				<string>conferences.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The banquet room could ___  up to 750 for dinner</string>
+				<key>A</key>
+				<string>accommodated</string>
+				<key>B</key>
+				<string>accommodate</string>
+				<key>C</key>
+				<string>accommodation</string>
+				<key>D</key>
+				<string>accommodating</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>Helen made the final ___ for use of the conference room with the hotel’s general manager?</string>
+				<key>A</key>
+				<string>arranging</string>
+				<key>B</key>
+				<string>arrange</string>
+				<key>C</key>
+				<string>arrangement</string>
+				<key>D</key>
+				<string>arranged</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>For most people, Samco is ___ with computer chip production</string>
+				<key>A</key>
+				<string>associate</string>
+				<key>B</key>
+				<string>associated</string>
+				<key>C</key>
+				<string>associating</string>
+				<key>D</key>
+				<string>association</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>We expect that fewer guests will ___ evening gala</string>
+				<key>A</key>
+				<string>attend</string>
+				<key>B</key>
+				<string>attending</string>
+				<key>C</key>
+				<string>attention</string>
+				<key>D</key>
+				<string>attendance</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>The association’s members were asked to ___ for the special session well in advance because space in the lecture hall was limited</string>
+				<key>A</key>
+				<string>register</string>
+				<key>B</key>
+				<string>registration</string>
+				<key>C</key>
+				<string>registering</string>
+				<key>D</key>
+				<string>registrar</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>By adding more class ___,the staff was able to please more members</string>
+				<key>A</key>
+				<string>select</string>
+				<key>B</key>
+				<string>selective</string>
+				<key>C</key>
+				<string>selecting</string>
+				<key>D</key>
+				<string>selections</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>5.rconferences</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What are these emails about?</string>
+					<key>A</key>
+					<string>The date of the conference</string>
+					<key>B</key>
+					<string>The conference site</string>
+					<key>C</key>
+					<string>The topics of the conference sessions</string>
+					<key>D</key>
+					<string>The number of conference attendees</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>How many meeting rooms will they need?</string>
+					<key>A</key>
+					<string>Only three</string>
+					<key>B</key>
+					<string>At least five</string>
+					<key>C</key>
+					<string>Up to ten</string>
+					<key>D</key>
+					<string>Almost 50</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does Max prefer about then Convention Center?</string>
+					<key>A</key>
+					<string>The price</string>
+					<key>B</key>
+					<string>The location</string>
+					<key>C</key>
+					<string>The size</string>
+					<key>D</key>
+					<string>The people</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The words get in touch  in line 14 of the first email is closest in meaning to</string>
+					<key>A</key>
+					<string>offer</string>
+					<key>B</key>
+					<string>discuss</string>
+					<key>C</key>
+					<string>provide</string>
+					<key>D</key>
+					<string>contact</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word selecting in line 1 of the second email is closest in meaning to</string>
+					<key>A</key>
+					<string>choosing</string>
+					<key>B</key>
+					<string>reserving</string>
+					<key>C</key>
+					<string>comparing</string>
+					<key>D</key>
+					<string>seeking</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatacomputers.png</string>
+		<key>name</key>
+		<string>Computers</string>
+		<key>vocabulary</key>
+		<string>6.vcomputer</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/06%20Computers.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What does the speaker suggest that listeners do?</string>
+					<key>A</key>
+					<string>Buy his software</string>
+					<key>B</key>
+					<string>Read the manual</string>
+					<key>C</key>
+					<string>Figure out the program by tinkering with it</string>
+					<key>D</key>
+					<string>Consult the competitor’s manual to check for compatibility</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What problems could users face?</string>
+					<key>A</key>
+					<string>Their warranties could be invalidated</string>
+					<key>B</key>
+					<string>Their warning systems could malfunction</string>
+					<key>C</key>
+					<string>Their computers could shut down without warning</string>
+					<key>D</key>
+					<string>Their manuals could be inaccurate</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What does the speaker recommend doing with files?</string>
+					<key>A</key>
+					<string>Read them</string>
+					<key>B</key>
+					<string>Accessing them</string>
+					<key>C</key>
+					<string>Deleting them</string>
+					<key>D</key>
+					<string>Copying them</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What happens when the man tries to access his email?</string>
+					<key>A</key>
+					<string>The computer shuts down</string>
+					<key>B</key>
+					<string>A warning appears on the screen</string>
+					<key>C</key>
+					<string>He hears a beeping noise</string>
+					<key>D</key>
+					<string>The screen turns black</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What will the man do now?</string>
+					<key>A</key>
+					<string>Turn off the computer</string>
+					<key>B</key>
+					<string>Get a new monitor</string>
+					<key>C</key>
+					<string>Use a different program</string>
+					<key>D</key>
+					<string>wait some more time</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does the woman suggest doing?</string>
+					<key>A</key>
+					<string>Working harder</string>
+					<key>B</key>
+					<string>Taking the computer back to the store </string>
+					<key>C</key>
+					<string>Calling someone to fix the computer</string>
+					<key>D</key>
+					<string>ignoring the problem</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>A</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>computers.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string> In order to ___ your email messages, you must type in your password </string>
+				<key>A</key>
+				<string>access</string>
+				<key>B</key>
+				<string>accessible</string>
+				<key>C</key>
+				<string>accessed</string>
+				<key>D</key>
+				<string>accessibility</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>After reviewing the schedule, I realized we had not ___ enough time for the software training</string>
+				<key>A</key>
+				<string>allocate</string>
+				<key>B</key>
+				<string>allocated</string>
+				<key>C</key>
+				<string>allocating</string>
+				<key>D</key>
+				<string>allocation</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The computer staff is responsible for making sure all system files are ___</string>
+				<key>A</key>
+				<string>duplication</string>
+				<key>B</key>
+				<string>duplicated</string>
+				<key>C</key>
+				<string>duplicator</string>
+				<key>D</key>
+				<string>duplicate</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>___ to examine the capabilities of the computer carefully has cost us a lot of time and money</string>
+				<key>A</key>
+				<string>Fail</string>
+				<key>B</key>
+				<string>Failure</string>
+				<key>C</key>
+				<string>Failed</string>
+				<key>D</key>
+				<string>Fallible</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>She ___ the warning that the hard drive was full, and consequently they were unable to save the test data</string>
+				<key>A</key>
+				<string>ignore</string>
+				<key>B</key>
+				<string>ignored</string>
+				<key>C</key>
+				<string>ignoring</string>
+				<key>D</key>
+				<string>ignorant</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>The computer will ___ you to save your work before quitting</string>
+				<key>A</key>
+				<string>warning</string>
+				<key>B</key>
+				<string>warned</string>
+				<key>C</key>
+				<string>warn</string>
+				<key>D</key>
+				<string>warns</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>6.rcomputer</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does Janet want Jim to help her with?</string>
+					<key>A</key>
+					<string>Finding money to buy a computer</string>
+					<key>B</key>
+					<string>Accessing her files</string>
+					<key>C</key>
+					<string>Choosing a new computer</string>
+					<key>D</key>
+					<string>Repairing her computer</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does Janet to do this weekend?</string>
+					<key>A</key>
+					<string>Call Jim</string>
+					<key>B</key>
+					<string>Go on a date with Jim</string>
+					<key>C</key>
+					<string>Look for a new computer</string>
+					<key>D</key>
+					<string>Figure out the reason for her problem</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>When will Janet’s big project begin?</string>
+					<key>A</key>
+					<string>Saturday</string>
+					<key>B</key>
+					<string>Sunday</string>
+					<key>C</key>
+					<string>Before the weekend</string>
+					<key>D</key>
+					<string>Next month</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The words get allocated  in line 3 is closest in meaning to</string>
+					<key>A</key>
+					<string>earned</string>
+					<key>B</key>
+					<string>designated</string>
+					<key>C</key>
+					<string>borrowed</string>
+					<key>D</key>
+					<string>removed</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The word access in line 11 is closest in meaning to</string>
+					<key>A</key>
+					<string>save</string>
+					<key>B</key>
+					<string>write</string>
+					<key>C</key>
+					<string>close</string>
+					<key>D</key>
+					<string>open</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avataofficeTechnology.png</string>
+		<key>name</key>
+		<string>Office Technology</string>
+		<key>vocabulary</key>
+		<string>7.vofficetechnology</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/07%20Office%20Tech.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Why don’t they order units on an as needed basis?</string>
+					<key>A</key>
+					<string>They’re more expensive</string>
+					<key>B</key>
+					<string>The provider won’t take individual orders</string>
+					<key>C</key>
+					<string>Delivery time is too long</string>
+					<key>D</key>
+					<string>Nobody takes the initiative to place the order</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What kind of provider could help them?</string>
+					<key>A</key>
+					<string>A lass pushy provider</string>
+					<key>B</key>
+					<string>A more aggressive provider</string>
+					<key>C</key>
+					<string>One with better prices</string>
+					<key>D</key>
+					<string>One with a web site</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does the speaker like about the suggested company’s products?</string>
+					<key>A</key>
+					<string>The durability</string>
+					<key>B</key>
+					<string>The quality</string>
+					<key>C</key>
+					<string> The prize</string>
+					<key>D</key>
+					<string>The size</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What is required for all new purchases?</string>
+					<key>A</key>
+					<string>A receipt</string>
+					<key>B</key>
+					<string>A charge card</string>
+					<key>C</key>
+					<string>Up-front payment</string>
+					<key>D</key>
+					<string>Approval</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is the purpose of this requirement?</string>
+					<key>A</key>
+					<string> To avoid delays</string>
+					<key>B</key>
+					<string>To help save money</string>
+					<key>C</key>
+					<string>To make purchasing a top priority</string>
+					<key>D</key>
+					<string>To reduce steps in the ordering process</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What is the woman’s opinion of this requirement?</string>
+					<key>A</key>
+					<string>It’s annoying</string>
+					<key>B</key>
+					<string>It’s enjoyable</string>
+					<key>C</key>
+					<string>It’s a good idea</string>
+					<key>D</key>
+					<string>It’s boring</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>B</string>
+				<string>C</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>image</key>
+				<string>officeTechnology.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string> ___ is still a major concern for inner city schools that want to install computers </string>
+				<key>A</key>
+				<string>afford</string>
+				<key>B</key>
+				<string>affording</string>
+				<key>C</key>
+				<string>affordable</string>
+				<key>D</key>
+				<string>affordability</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>Hoping to repeat the success of the previous year’s sales ___, the vice president held a meeting of all the managers</string>
+				<key>A</key>
+				<string>initiated</string>
+				<key>B</key>
+				<string>initiating</string>
+				<key>C</key>
+				<string>initiative</string>
+				<key>D</key>
+				<string>initiation</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>The athlete’s extraordinary ___ distracted customers from the auto itself</string>
+				<key>A</key>
+				<string>physique</string>
+				<key>B</key>
+				<string>physical</string>
+				<key>C</key>
+				<string>physicality</string>
+				<key>D</key>
+				<string>physically</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>As promised in our last meeting, this contract ___ you with the best prices</string>
+				<key>A</key>
+				<string>provide</string>
+				<key>B</key>
+				<string>provides</string>
+				<key>C</key>
+				<string>provision</string>
+				<key>D</key>
+				<string>provider</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>When a problem ___frequently, it’s time to reexamine the process</string>
+				<key>A</key>
+				<string>recur</string>
+				<key>B</key>
+				<string>recurrence</string>
+				<key>C</key>
+				<string>recurring</string>
+				<key>D</key>
+				<string>recurs</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The employee preferred to have a ___ in salary than to have to continue working with her outdated computer</string>
+				<key>A</key>
+				<string>reducing</string>
+				<key>B</key>
+				<string>reduction</string>
+				<key>C</key>
+				<string>reduce</string>
+				<key>D</key>
+				<string>reduces</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>7.rofficetechnology</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What will Mr.Conner buy now?</string>
+					<key>A</key>
+					<string>Coffeemakers</string>
+					<key>B</key>
+					<string>Ovens</string>
+					<key>C</key>
+					<string>Microcomputers</string>
+					<key>D</key>
+					<string>Refrigerators</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does he say that he likes about the product he has selected?</string>
+					<key>A</key>
+					<string>It reduces mess</string>
+					<key>B</key>
+					<string>It is durable</string>
+					<key>C</key>
+					<string> It has a good price</string>
+					<key>D</key>
+					<string>It will be delivered regularly</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>How often will he order refills?</string>
+					<key>A</key>
+					<string>Once a day</string>
+					<key>B</key>
+					<string>Once a week</string>
+					<key>C</key>
+					<string>Every month</string>
+					<key>D</key>
+					<string>When he needs them</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The words get provider  in line 2 of the first letter is closest in meaning to</string>
+					<key>A</key>
+					<string>consumer</string>
+					<key>B</key>
+					<string>supplier</string>
+					<key>C</key>
+					<string>maker</string>
+					<key>D</key>
+					<string>designer</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word stock in line 19 of the first letter is closest in meaning to</string>
+					<key>A</key>
+					<string>have</string>
+					<key>B</key>
+					<string>repair</string>
+					<key>C</key>
+					<string>buy</string>
+					<key>D</key>
+					<string>use</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avataofficeProcedure.png</string>
+		<key>name</key>
+		<string>Office Procedures</string>
+		<key>vocabulary</key>
+		<string>8.vofficeprocedure</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/08%20Office%20Procedure.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Who is the speaker?</string>
+					<key>A</key>
+					<string>A software trainer</string>
+					<key>B</key>
+					<string>A hardware salesman</string>
+					<key>C</key>
+					<string>A new computer owner</string>
+					<key>D</key>
+					<string>As scientist from R&amp;D</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What will they do today?</string>
+					<key>A</key>
+					<string>Choose new software</string>
+					<key>B</key>
+					<string>Renew their computer skills</string>
+					<key>C</key>
+					<string>Hire a specialist</string>
+					<key>D</key>
+					<string>Take apart the CPU</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What will they do after the speaker finishes?</string>
+					<key>A</key>
+					<string>Spend a lot of time practicing</string>
+					<key>B</key>
+					<string>Watch a television program</string>
+					<key>C</key>
+					<string>Have lunch</string>
+					<key>D</key>
+					<string>Attend a board meeting</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What will the woman tell the man about?</string>
+					<key>A</key>
+					<string>Hiring policies</string>
+					<key>B</key>
+					<string>Company practices</string>
+					<key>C</key>
+					<string>How to make a schedule</string>
+					<key>D</key>
+					<string>The employee’s communication problems</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What problem has the man had?</string>
+					<key>A</key>
+					<string>No one can explain things to him clearly</string>
+					<key>B</key>
+					<string>He never has time for anything</string>
+					<key>C</key>
+					<string>No one has time to talk to him</string>
+					<key>D</key>
+					<string>He isn’t familiar with coworkers</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How does the woman suggest he reinforce their discussion?</string>
+					<key>A</key>
+					<string>By talking to other employees</string>
+					<key>B</key>
+					<string>By practicing what he hears</string>
+					<key>C</key>
+					<string>By reviewing the schedule</string>
+					<key>D</key>
+					<string>By looking at the handbook</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>C</string>
+				<string>C</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>image</key>
+				<string>officeProcedures.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Ms.Handa was unable to express her ___ for all that her colleagues had done for her</string>
+				<key>A</key>
+				<string>appreciation</string>
+				<key>B</key>
+				<string>appreciated</string>
+				<key>C</key>
+				<string>appreciating</string>
+				<key>D</key>
+				<string>appreciates</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The programmer is ___ the message so that it’s not accessible to everyone</string>
+				<key>A</key>
+				<string>code</string>
+				<key>B</key>
+				<string>coding</string>
+				<key>C</key>
+				<string>coded</string>
+				<key>D</key>
+				<string>coder</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>It look like this disk was___to intense heat, because it’s warped and pocked</string>
+				<key>A</key>
+				<string>expose</string>
+				<key>B</key>
+				<string>exposed</string>
+				<key>C</key>
+				<string>exposing</string>
+				<key>D</key>
+				<string>exposure</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>The___ of answering each telephone call on the third ring requires a dedicated receptionist</string>
+				<key>A</key>
+				<string>practices</string>
+				<key>B</key>
+				<string>practical</string>
+				<key>C</key>
+				<string>practiced</string>
+				<key>D</key>
+				<string>practice</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Human Resources tries to ___ employee’s understanding by offering workshops twice a year</string>
+				<key>A</key>
+				<string>reinforce</string>
+				<key>B</key>
+				<string>reinforcing</string>
+				<key>C</key>
+				<string>reinforced</string>
+				<key>D</key>
+				<string>reinforcement</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>Senior employees are often asked to ___ office procedures</string>
+				<key>A</key>
+				<string>verbally</string>
+				<key>B</key>
+				<string>verbalize</string>
+				<key>C</key>
+				<string>verbal</string>
+				<key>D</key>
+				<string>verbalising</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>8.rofficeprocedures</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What should new employees do with the handbook?</string>
+					<key>A</key>
+					<string>Read it quickly</string>
+					<key>B</key>
+					<string>Study it completely</string>
+					<key>C</key>
+					<string>Hide it in a drawer</string>
+					<key>D</key>
+					<string>Share it with coworkers</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What should the supervisor do when an employee breaks a rule?</string>
+					<key>A</key>
+					<string>Punish her</string>
+					<key>B</key>
+					<string>Fire her</string>
+					<key>C</key>
+					<string>Tell her</string>
+					<key>D</key>
+					<string>Retrain her</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>How can experienced coworkers help new employees?</string>
+					<key>A</key>
+					<string>By writing a new handbook</string>
+					<key>B</key>
+					<string>By explaining office procedures</string>
+					<key>C</key>
+					<string>By inviting them to staff meetings</string>
+					<key>D</key>
+					<string>By telling the supervisor when a rule has been broken</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>The words get bring  in in line 1 are closest in meaning to</string>
+					<key>A</key>
+					<string>invite</string>
+					<key>B</key>
+					<string>train</string>
+					<key>C</key>
+					<string>hire</string>
+					<key>D</key>
+					<string>meet</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word code in line 3 is closest in meaning to</string>
+					<key>A</key>
+					<string>rules</string>
+					<key>B</key>
+					<string>lessons</string>
+					<key>C</key>
+					<string>mistakes</string>
+					<key>D</key>
+					<string>types</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avataelectronics.png</string>
+		<key>name</key>
+		<string>Electronics</string>
+		<key>vocabulary</key>
+		<string>9.velectronics</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/09%20Electronics.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What is the speaker’s opinion of the process of downloading software?</string>
+					<key>A</key>
+					<string>anyone can do it</string>
+					<key>B</key>
+					<string>It requires technical skills</string>
+					<key>C</key>
+					<string>It’s easiest if you download from a remote server</string>
+					<key>D</key>
+					<string>It’s time consuming</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Who is the intended audience for this talk?</string>
+					<key>A</key>
+					<string>Computer technicians</string>
+					<key>B</key>
+					<string>Network managers</string>
+					<key>C</key>
+					<string>New computer users</string>
+					<key>D</key>
+					<string>Software writers</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What will the listener do next?</string>
+					<key>A</key>
+					<string>Look at a chart</string>
+					<key>B</key>
+					<string>Turn on their computers</string>
+					<key>C</key>
+					<string>Connect to the internet</string>
+					<key>D</key>
+					<string>Type a web address</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What can’t the woman retrieve her file?</string>
+					<key>A</key>
+					<string>She doesn’t know how</string>
+					<key>B</key>
+					<string>She forgot it’s name</string>
+					<key>C</key>
+					<string>It was accidentally deleted</string>
+					<key>D</key>
+					<string>She can’t remember where it’s stored</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Why does she need the file?</string>
+					<key>A</key>
+					<string>To do her accounts</string>
+					<key>B</key>
+					<string>To report the news</string>
+					<key>C</key>
+					<string>To finish her proposal</string>
+					<key>D</key>
+					<string>To get information about a store</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What does the man suggest the woman should do?</string>
+					<key>A</key>
+					<string>figure it out herself</string>
+					<key>B</key>
+					<string>Let him help her</string>
+					<key>C</key>
+					<string>Improve her skills</string>
+					<key>D</key>
+					<string>Get help from the IT department</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>C</string>
+				<string>B</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>electronics.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>The ___ of the new computer network was apparent among the employees after only a few months</string>
+				<key>A</key>
+				<string>popular</string>
+				<key>B</key>
+				<string>popularize</string>
+				<key>C</key>
+				<string>popularity</string>
+				<key>D</key>
+				<string>population</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>We will ___ all of our outdated software with the newest versions</string>
+				<key>A</key>
+				<string>replacement</string>
+				<key>B</key>
+				<string>replaced</string>
+				<key>C</key>
+				<string>replaceable</string>
+				<key>D</key>
+				<string>replace</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>There is a ___ approach to software design integration that all the big software developers are currently learning</string>
+				<key>A</key>
+				<string>revolutionised</string>
+				<key>B</key>
+				<string>revolutionary</string>
+				<key>C</key>
+				<string>revolution</string>
+				<key>D</key>
+				<string>revolt</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>While Fabio’s___with computers surpasses the technicians, he’s unable to communicate his personal needs to the office manager</string>
+				<key>A</key>
+				<string>skill</string>
+				<key>B</key>
+				<string>skilled</string>
+				<key>C</key>
+				<string>skilful</string>
+				<key>D</key>
+				<string>skilfully</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>The hard disk can ___ up to 25 gigabytes of data</string>
+				<key>A</key>
+				<string>stores</string>
+				<key>B</key>
+				<string>storage</string>
+				<key>C</key>
+				<string>store</string>
+				<key>D</key>
+				<string>storing</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>The newspaper article on the development of new fiber optic-cables was so full of ___language that nobody could understand it </string>
+				<key>A</key>
+				<string>technical</string>
+				<key>B</key>
+				<string>technically</string>
+				<key>C</key>
+				<string>technicality</string>
+				<key>D</key>
+				<string>technique</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>9.relectronics</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is true about the new software?</string>
+					<key>A</key>
+					<string>It’s difficult to use</string>
+					<key>B</key>
+					<string>It’s very different from the old software</string>
+					<key>C</key>
+					<string>It requires many months of training</string>
+					<key>D</key>
+					<string>It’s very expensive</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Which staff members will be trained to use the new software?</string>
+					<key>A</key>
+					<string>Just one from each department</string>
+					<key>B</key>
+					<string>Fred and Mary only</string>
+					<key>C</key>
+					<string> Only four of them</string>
+					<key>D</key>
+					<string>All of them</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>How many training sessions will each person attend?</string>
+					<key>A</key>
+					<string>One</string>
+					<key>B</key>
+					<string>Two</string>
+					<key>C</key>
+					<string>Four</string>
+					<key>D</key>
+					<string>Eight</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The words get skills  in line 9 of the second email is closest in meaning to</string>
+					<key>A</key>
+					<string>abilities</string>
+					<key>B</key>
+					<string>opportunities</string>
+					<key>C</key>
+					<string>tasks</string>
+					<key>D</key>
+					<string>ideas</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The word replace in line 1 of the first email is closest in meaning to</string>
+					<key>A</key>
+					<string>sell</string>
+					<key>B</key>
+					<string>change</string>
+					<key>C</key>
+					<string>keep</string>
+					<key>D</key>
+					<string>locate</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatacorrespondence.png</string>
+		<key>name</key>
+		<string>Correspondence</string>
+		<key>vocabulary</key>
+		<string>10.vcorrespondence</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/10%20Correspondence.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Where would you hear this talk?</string>
+					<key>A</key>
+					<string>A post office</string>
+					<key>B</key>
+					<string>A grocery store</string>
+					<key>C</key>
+					<string>An restaurant</string>
+					<key>D</key>
+					<string>An assembly line</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is the purpose of this talk?</string>
+					<key>A</key>
+					<string>To sell merchandise</string>
+					<key>B</key>
+					<string>To inform customers of a new service</string>
+					<key>C</key>
+					<string>To warm workers</string>
+					<key>D</key>
+					<string>To recognise a new employee</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What time does the Courier Center close?</string>
+					<key>A</key>
+					<string> 2:00 PM</string>
+					<key>B</key>
+					<string>4:00 PM</string>
+					<key>C</key>
+					<string>6:00 PM</string>
+					<key>D</key>
+					<string>8:00 PM</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>When will the meeting take place?</string>
+					<key>A</key>
+					<string>This afternoon</string>
+					<key>B</key>
+					<string>Tomorrow</string>
+					<key>C</key>
+					<string>In two days</string>
+					<key>D</key>
+					<string>On Tuesday</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Why don’t the woman help assemble the documents?</string>
+					<key>A</key>
+					<string>She’s in a meeting</string>
+					<key>B</key>
+					<string>She hurt her hand</string>
+					<key>C</key>
+					<string>She’s too busy</string>
+					<key>D</key>
+					<string>She needs to revise them first</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does the woman suggest that the man do?</string>
+					<key>A</key>
+					<string>Finish the work before the afternoon</string>
+					<key>B</key>
+					<string>Do the work himself</string>
+					<key>C</key>
+					<string>Ask another person for help</string>
+					<key>D</key>
+					<string>Remember to fold all the documents</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>C</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>correspondence.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>I don’t want to ___ matters, but have you considered using color to make your brochure stand out?</string>
+				<key>A</key>
+				<string>complicate</string>
+				<key>B</key>
+				<string>complication</string>
+				<key>C</key>
+				<string>complicated</string>
+				<key>D</key>
+				<string>complicating</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>It’s worth ___ in the memo that we’re finished the draft of the proposal</string>
+				<key>A</key>
+				<string>mentionable</string>
+				<key>B</key>
+				<string>mentioning</string>
+				<key>C</key>
+				<string>mentions</string>
+				<key>D</key>
+				<string>mentioned</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>The signatures on the ___ weren’t all legible because rain had caused the ink to run.</string>
+				<key>A</key>
+				<string>petition</string>
+				<key>B</key>
+				<string>petitioning</string>
+				<key>C</key>
+				<string>petitioners</string>
+				<key>D</key>
+				<string>petitioned</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>To send out business letters without ___ them is unprofessional</string>
+				<key>A</key>
+				<string>proofing</string>
+				<key>B</key>
+				<string>proof</string>
+				<key>C</key>
+				<string>proofreader</string>
+				<key>D</key>
+				<string>proofread</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The mail room is rarely asked to send letters by ___ mail.</string>
+				<key>A</key>
+				<string>registers</string>
+				<key>B</key>
+				<string>registered</string>
+				<key>C</key>
+				<string>register</string>
+				<key>D</key>
+				<string>registration</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>After each ___, you need to reread what you’ve written and note your suggestion for changes </string>
+				<key>A</key>
+				<string>revise</string>
+				<key>B</key>
+				<string>revised</string>
+				<key>C</key>
+				<string>revision</string>
+				<key>D</key>
+				<string>will revise</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>10.rrespondence</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Who is the audience for this advertisement?</string>
+					<key>A</key>
+					<string>Editors</string>
+					<key>B</key>
+					<string>Couriers</string>
+					<key>C</key>
+					<string>Corporate directors</string>
+					<key>D</key>
+					<string>Small business owners</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Which of the following is a service offered by Office system, Inc?</string>
+					<key>A</key>
+					<string>Accounting</string>
+					<key>B</key>
+					<string>Website development</string>
+					<key>C</key>
+					<string> Assembling documents</string>
+					<key>D</key>
+					<string>Read letters</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How can a customer open an account with Office System, Inc?</string>
+					<key>A</key>
+					<string>By visiting a company branch</string>
+					<key>B</key>
+					<string>By sending an email</string>
+					<key>C</key>
+					<string>By completing an online questionnaire</string>
+					<key>D</key>
+					<string>By writing a letter</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The words get revision  in line 5 is closest in meaning to</string>
+					<key>A</key>
+					<string>copying</string>
+					<key>B</key>
+					<string>rewriting</string>
+					<key>C</key>
+					<string>delivery</string>
+					<key>D</key>
+					<string>development</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>The word beforehand  in line 14 is closest in meaning to</string>
+					<key>A</key>
+					<string>by hand</string>
+					<key>B</key>
+					<string>thoroughly</string>
+					<key>C</key>
+					<string>in advance</string>
+					<key>D</key>
+					<string>in person</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatajobandrecruitment.png</string>
+		<key>name</key>
+		<string>Job Advertising and Recruiting</string>
+		<key>vocabulary</key>
+		<string>11.vjobadvertisingandrecruiting</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/11%20Job%20Ads%20and%20recruiting.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What should the resume include?</string>
+					<key>A</key>
+					<string>your major in college</string>
+					<key>B</key>
+					<string>your grade point average</string>
+					<key>C</key>
+					<string>a current reference</string>
+					<key>D</key>
+					<string>a list of concrete achievements</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What is the employer looking for?</string>
+					<key>A</key>
+					<string>employees with long term career plans</string>
+					<key>B</key>
+					<string>people to fill positions immediately</string>
+					<key>C</key>
+					<string>aggressive marketers</string>
+					<key>D</key>
+					<string>people willing to accept minimum wage</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Who should apply for a position now?</string>
+					<key>A</key>
+					<string>accountants</string>
+					<key>B</key>
+					<string>recruiters</string>
+					<key>C</key>
+					<string>school teachers</string>
+					<key>D</key>
+					<string>apartment managers</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What has the woman been doing lately?</string>
+					<key>A</key>
+					<string>Fixing her drain</string>
+					<key>B</key>
+					<string>Earning money</string>
+					<key>C</key>
+					<string>looking for matches</string>
+					<key>D</key>
+					<string>searching for a job</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>How long has she been doing this?</string>
+					<key>A</key>
+					<string>two months</string>
+					<key>B</key>
+					<string>four months</string>
+					<key>C</key>
+					<string>five months</string>
+					<key>D</key>
+					<string>nine months</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What did she do yesterday?</string>
+					<key>A</key>
+					<string>she had an interview</string>
+					<key>B</key>
+					<string>she read a review</string>
+					<key>C</key>
+					<string>she helped someone</string>
+					<key>D</key>
+					<string>she accepted a new position</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>B</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>image</key>
+				<string>jobadvertisement.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>Your resume shows you have ___ a great deal in your last position</string>
+				<key>A</key>
+				<string>accomplish</string>
+				<key>B</key>
+				<string>accomplishment</string>
+				<key>C</key>
+				<string>accomplished</string>
+				<key>D</key>
+				<string>accomplishing</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>This program is used to scan resume and search for key words that___</string>
+				<key>A</key>
+				<string>match</string>
+				<key>B</key>
+				<string>matched</string>
+				<key>C</key>
+				<string>matching</string>
+				<key>D</key>
+				<string>will match</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>It&apos;s illegal to ___ candidates based on gender or ethnicity</string>
+				<key>A</key>
+				<string>profile</string>
+				<key>B</key>
+				<string>profilling</string>
+				<key>C</key>
+				<string>profiled</string>
+				<key>D</key>
+				<string>will profile</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The applicants who ___ will be flown to the corporate office and interviewed there</string>
+				<key>A</key>
+				<string>qualification</string>
+				<key>B</key>
+				<string>qualify</string>
+				<key>C</key>
+				<string>qualifying</string>
+				<key>D</key>
+				<string>qualifies</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>The company hired a professinal ___ to fill the vacant positioins</string>
+				<key>A</key>
+				<string>recruited</string>
+				<key>B</key>
+				<string>recruiting</string>
+				<key>C</key>
+				<string>recruitment</string>
+				<key>D</key>
+				<string>recruiter</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>After___ all his materials, he had no option but to sit back and wait for some response</string>
+				<key>A</key>
+				<string>submitting</string>
+				<key>B</key>
+				<string>submitted</string>
+				<key>C</key>
+				<string>submission</string>
+				<key>D</key>
+				<string>submit</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>11.rjobadvertisingandrecruiting</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>Why does Mr.Smithers need to hire new staff members?</string>
+					<key>A</key>
+					<string>He has recently fired several employees</string>
+					<key>B</key>
+					<string>His company has a lot of work</string>
+					<key>C</key>
+					<string>Marjorie morgan is leaving her job</string>
+					<key>D</key>
+					<string>Several employees have been promoted</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What does Mr.Smithers ask Ms.Morgan to do?</string>
+					<key>A</key>
+					<string>interview job candidates</string>
+					<key>B</key>
+					<string>send him comment</string>
+					<key>C</key>
+					<string>make a plan to recruit new employees</string>
+					<key>D</key>
+					<string>read the major national newpapers</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What will happen by April 30?</string>
+					<key>A</key>
+					<string>Job candidates will submit their applications</string>
+					<key>B</key>
+					<string>interviews will begin</string>
+					<key>C</key>
+					<string>two or three new staff members will be hired</string>
+					<key>D</key>
+					<string>the new staff members will begin working</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The work candidates in line 7 of the first email is closest in meaning to</string>
+					<key>A</key>
+					<string>advertisements</string>
+					<key>B</key>
+					<string>descriptions</string>
+					<key>C</key>
+					<string>recommendations</string>
+					<key>D</key>
+					<string>applicants</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>The word qualifications  in line 6-7 of the second email is closest in meaning to</string>
+					<key>A</key>
+					<string>quantities</string>
+					<key>B</key>
+					<string>positions</string>
+					<key>C</key>
+					<string>abilities</string>
+					<key>D</key>
+					<string>salaries</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avataapplyingandinterviewing.png</string>
+		<key>name</key>
+		<string>Applying and Interviewing</string>
+		<key>vocabulary</key>
+		<string>12.vapplyingandinterviewing</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/12%20Apply%20and%20Interview.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Who would call in to this hotline?</string>
+					<key>A</key>
+					<string>An expert in Salvo&apos;s product line</string>
+					<key>B</key>
+					<string>An employer</string>
+					<key>C</key>
+					<string>a human resources presenter</string>
+					<key>D</key>
+					<string>A job seeker</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What is the purpose of this recording?</string>
+					<key>A</key>
+					<string>To inform callers about salvo</string>
+					<key>B</key>
+					<string>To explain to callers what they can do</string>
+					<key>C</key>
+					<string>To present the company&apos;s philisophy</string>
+					<key>D</key>
+					<string>To give background information about a product problem</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What kind of people is salvo currently looking for?</string>
+					<key>A</key>
+					<string>fashion designers</string>
+					<key>B</key>
+					<string>foreign language speakers</string>
+					<key>C</key>
+					<string>human resource experts</string>
+					<key>D</key>
+					<string>software users</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What does people think about the woman now?</string>
+					<key>A</key>
+					<string>She has no confidence</string>
+					<key>B</key>
+					<string>She is an expert</string>
+					<key>C</key>
+					<string>She is a beginner at networking</string>
+					<key>D</key>
+					<string>Her computer skills are weak</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What was the woman hesitant to do?</string>
+					<key>A</key>
+					<string>Apply for a job</string>
+					<key>B</key>
+					<string>Use a computer</string>
+					<key>C</key>
+					<string>Give a presentation</string>
+					<key>D</key>
+					<string>Go to a job interview</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What does the man want the woman to do?</string>
+					<key>A</key>
+					<string>Help him with a workshop</string>
+					<key>B</key>
+					<string>Speak at a conference</string>
+					<key>C</key>
+					<string>Give him some change</string>
+					<key>D</key>
+					<string>Hire him</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>C</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>image</key>
+				<string>applyingandinterview.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>So many well qualifield people___for the position that we won&apos;t be able to make a decision for several weeks</string>
+				<key>A</key>
+				<string>apply</string>
+				<key>B</key>
+				<string>application</string>
+				<key>C</key>
+				<string>applicant</string>
+				<key>D</key>
+				<string>applied</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>as the interview continued, the applicant&apos;s___began to decline</string>
+				<key>A</key>
+				<string>confidently</string>
+				<key>B</key>
+				<string>confident</string>
+				<key>C</key>
+				<string>confidence</string>
+				<key>D</key>
+				<string>confidential</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>The applicant&apos;s unique___enabled her to have almost any job that she wanted</string>
+				<key>A</key>
+				<string>expertise</string>
+				<key>B</key>
+				<string>experts</string>
+				<key>C</key>
+				<string>expertly</string>
+				<key>D</key>
+				<string>expert</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>she spoke without___,expressing self confidence and projecting that she had a firm handle on the information</string>
+				<key>A</key>
+				<string>hesitant</string>
+				<key>B</key>
+				<string>hesitate</string>
+				<key>C</key>
+				<string>hesitatingly</string>
+				<key>D</key>
+				<string>hesitation</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>During an interview, it&apos;s important to ___ your weaknesses in a way that shows you are working to improve them</string>
+				<key>A</key>
+				<string>presentation</string>
+				<key>B</key>
+				<string>present</string>
+				<key>C</key>
+				<string>presentable</string>
+				<key>D</key>
+				<string>presenting</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Her handshake had always felt like a dead fish and it was taken as a sign of a ___ character</string>
+				<key>A</key>
+				<string>weak</string>
+				<key>B</key>
+				<string>weakly</string>
+				<key>C</key>
+				<string>weakness</string>
+				<key>D</key>
+				<string>weakening</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>12.rapplyingandinterviewing</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>What kind of job is Mr.Rutherford looking for?</string>
+					<key>A</key>
+					<string>Office manager</string>
+					<key>B</key>
+					<string>Human resources director</string>
+					<key>C</key>
+					<string>Marketing research assistant</string>
+					<key>D</key>
+					<string>Newspaper reporter</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>When does he want to have an interview?</string>
+					<key>A</key>
+					<string>Sunday</string>
+					<key>B</key>
+					<string>Next week</string>
+					<key>C</key>
+					<string>next month</string>
+					<key>D</key>
+					<string>in three months</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What does he include with this letter?</string>
+					<key>A</key>
+					<string>a copy of his university degree</string>
+					<key>B</key>
+					<string>three reference books</string>
+					<key>C</key>
+					<string>a job description</string>
+					<key>D</key>
+					<string>his resume</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The work background in line 2 is closest in meaning to</string>
+					<key>A</key>
+					<string>experience</string>
+					<key>B</key>
+					<string>location</string>
+					<key>C</key>
+					<string>posittion</string>
+					<key>D</key>
+					<string>age</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The word confident  in line 13 is closest in meaning to</string>
+					<key>A</key>
+					<string>afraid</string>
+					<key>B</key>
+					<string>lucky</string>
+					<key>C</key>
+					<string>glad</string>
+					<key>D</key>
+					<string>sure</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatahiringandtraining.png</string>
+		<key>name</key>
+		<string>Hiring and Training</string>
+		<key>vocabulary</key>
+		<string>13.vhiringandtraining</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/13%20Hire%20and%20Train.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Who is listening to this talk?</string>
+					<key>A</key>
+					<string>new workers</string>
+					<key>B</key>
+					<string>annual trainers</string>
+					<key>C</key>
+					<string>patients</string>
+					<key>D</key>
+					<string>new mentors</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>what will they do first?</string>
+					<key>A</key>
+					<string>select participants for the program</string>
+					<key>B</key>
+					<string>think of traits of good teachers</string>
+					<key>C</key>
+					<string>generate a list of rules</string>
+					<key>D</key>
+					<string>hear an update on sales figures</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>How long will they spend on the first activity?</string>
+					<key>A</key>
+					<string>two minutes</string>
+					<key>B</key>
+					<string>three minutes</string>
+					<key>C</key>
+					<string>four minutes</string>
+					<key>D</key>
+					<string>five minutes</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>What is the response to the training program?</string>
+					<key>A</key>
+					<string>Boredom</string>
+					<key>B</key>
+					<string>confusion</string>
+					<key>C</key>
+					<string>chaos</string>
+					<key>D</key>
+					<string>enthusiasm</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How long will the training program last?</string>
+					<key>A</key>
+					<string>One week</string>
+					<key>B</key>
+					<string>Two weeks</string>
+					<key>C</key>
+					<string>three weeks</string>
+					<key>D</key>
+					<string>four weeks</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What will the woman do now?</string>
+					<key>A</key>
+					<string>Join a discussion</string>
+					<key>B</key>
+					<string>setup the room</string>
+					<key>C</key>
+					<string>look for seating</string>
+					<key>D</key>
+					<string>write a letter</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>B</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>image</key>
+				<string>hiringandtraining.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The representation was___ seamlessly giving an impressive image of the team</string>
+				<key>A</key>
+				<string>conduct</string>
+				<key>B</key>
+				<string>conducted</string>
+				<key>C</key>
+				<string>conducting</string>
+				<key>D</key>
+				<string>conductor</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>You need to consider how many new sales you ___ in comparison to how many standing clients put in orders</string>
+				<key>A</key>
+				<string>generator</string>
+				<key>B</key>
+				<string>generated</string>
+				<key>C</key>
+				<string>generating</string>
+				<key>D</key>
+				<string>generation</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>after he was ___, he continued to take classes to upgrade his skills</string>
+				<key>A</key>
+				<string>hiring</string>
+				<key>B</key>
+				<string>hires</string>
+				<key>C</key>
+				<string>hired</string>
+				<key>D</key>
+				<string>hire</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Unfortunately, not all candidates can be offered a job, some have to be___</string>
+				<key>A</key>
+				<string>rejected</string>
+				<key>B</key>
+				<string>rejecting</string>
+				<key>C</key>
+				<string>rejection</string>
+				<key>D</key>
+				<string>reject</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>The ___ of the program depends on the active participation of everyone</string>
+				<key>A</key>
+				<string>successfully</string>
+				<key>B</key>
+				<string>succeed</string>
+				<key>C</key>
+				<string>successful</string>
+				<key>D</key>
+				<string>success</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>In all my years of ___. I have never seem such a motivated group of new hires</string>
+				<key>A</key>
+				<string>trainee</string>
+				<key>B</key>
+				<string>training</string>
+				<key>C</key>
+				<string>trains</string>
+				<key>D</key>
+				<string>trainer</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>13.rhiringandtraining</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>How long will the training session last?</string>
+					<key>A</key>
+					<string>three hours</string>
+					<key>B</key>
+					<string>six hours</string>
+					<key>C</key>
+					<string>nine hours</string>
+					<key>D</key>
+					<string>twelve hours</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Who must attend the training session?</string>
+					<key>A</key>
+					<string>All company employees</string>
+					<key>B</key>
+					<string>only members of the human resources department</string>
+					<key>C</key>
+					<string>mentors and supervisors</string>
+					<key>D</key>
+					<string>all new hires</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Why doesn&apos;t Amelia foote want to attend the training session?</string>
+					<key>A</key>
+					<string>She has an important family event</string>
+					<key>B</key>
+					<string>She thinks it won&apos;t be usefull</string>
+					<key>C</key>
+					<string>she believes the next session will be better</string>
+					<key>D</key>
+					<string>She doesn&apos;t have permission from her supervisor</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The work conducted in line 3 of the Memo is closest in meaning to</string>
+					<key>A</key>
+					<string>announced</string>
+					<key>B</key>
+					<string>informed</string>
+					<key>C</key>
+					<string>learned</string>
+					<key>D</key>
+					<string>held</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>The word reject  in line 12 of the email is closest in meaning to</string>
+					<key>A</key>
+					<string>consider</string>
+					<key>B</key>
+					<string>accept</string>
+					<key>C</key>
+					<string>say no</string>
+					<key>D</key>
+					<string>agree to</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatasalaries.png</string>
+		<key>name</key>
+		<string>Salaries and Benefits</string>
+		<key>vocabulary</key>
+		<string>14.vsalariesandbenefits</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/14%20Salaries%20and%20Benefits.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>How offten are raises given?</string>
+					<key>A</key>
+					<string>Once a year</string>
+					<key>B</key>
+					<string>twice a year</string>
+					<key>C</key>
+					<string>at an employee&apos;s request</string>
+					<key>D</key>
+					<string>whenever an employee is eligible for a raise</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Where should employees go to learn more about wage encreases?</string>
+					<key>A</key>
+					<string>The employee handbook</string>
+					<key>B</key>
+					<string>Their paycheck stubs</string>
+					<key>C</key>
+					<string>Their contract</string>
+					<key>D</key>
+					<string>Their supervisor</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>how many days of paid vacation does each employee get?</string>
+					<key>A</key>
+					<string>Five</string>
+					<key>B</key>
+					<string>Ten</string>
+					<key>C</key>
+					<string>Fourteen</string>
+					<key>D</key>
+					<string>Forty-two</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Why is the man disappointed?</string>
+					<key>A</key>
+					<string>His health coverage is poor</string>
+					<key>B</key>
+					<string>He asked for too much conpensaation</string>
+					<key>C</key>
+					<string>He doesn&apos;t know how to negotiate</string>
+					<key>D</key>
+					<string>He doesn&apos;t earn enough money</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>How long has he been working at the company?</string>
+					<key>A</key>
+					<string>two months</string>
+					<key>B</key>
+					<string>four months</string>
+					<key>C</key>
+					<string>six months</string>
+					<key>D</key>
+					<string>nine months</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>What benifit does he get?</string>
+					<key>A</key>
+					<string>life insurance</string>
+					<key>B</key>
+					<string>health insurance</string>
+					<key>C</key>
+					<string>pard vacation</string>
+					<key>D</key>
+					<string>regular raises</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>B</string>
+				<string>A</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>salariesandbenifits.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>All temporary workers are paid on an hourly ___and receive no benefit</string>
+				<key>A</key>
+				<string>base</string>
+				<key>B</key>
+				<string>based</string>
+				<key>C</key>
+				<string>basis</string>
+				<key>D</key>
+				<string>basic</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>What is the company&apos;s policy on ___ for parttime workers?</string>
+				<key>A</key>
+				<string>benefited</string>
+				<key>B</key>
+				<string>beneficial</string>
+				<key>C</key>
+				<string>benefits</string>
+				<key>D</key>
+				<string>benefit</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>The tired employee hoped that she would be ___ for all the long hours she keps and weekends she worked</string>
+				<key>A</key>
+				<string>compensation</string>
+				<key>B</key>
+				<string>compensates</string>
+				<key>C</key>
+				<string>compensated</string>
+				<key>D</key>
+				<string>compensate</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>sometimes the manager is too ___ and his workers take advantage of him?</string>
+				<key>A</key>
+				<string>flex</string>
+				<key>B</key>
+				<string>flexible</string>
+				<key>C</key>
+				<string>flexibly</string>
+				<key>D</key>
+				<string>flexibility</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>If the ___ continue into the evening, we will break for dinner at six</string>
+				<key>A</key>
+				<string>negotiator</string>
+				<key>B</key>
+				<string>negotiations</string>
+				<key>C</key>
+				<string>negotiate</string>
+				<key>D</key>
+				<string>negotiated</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>D</string>
+				<key>question</key>
+				<string>No one is sure what will happen to the company when the president finally ___</string>
+				<key>A</key>
+				<string>retires</string>
+				<key>B</key>
+				<string>retirement</string>
+				<key>C</key>
+				<string>retired</string>
+				<key>D</key>
+				<string>retiree</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>14.rsalariesandbenefits</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>How old is james porter?</string>
+					<key>A</key>
+					<string>Between 22 and 25</string>
+					<key>B</key>
+					<string>25</string>
+					<key>C</key>
+					<string>younger than 60</string>
+					<key>D</key>
+					<string>exactly 60</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>Who can receive retirement benefits after James dies?</string>
+					<key>A</key>
+					<string>His children</string>
+					<key>B</key>
+					<string>His wife</string>
+					<key>C</key>
+					<string>All of his dependents</string>
+					<key>D</key>
+					<string>Nobody</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>Who can get health coverage when james retires?</string>
+					<key>A</key>
+					<string>His 19 year old son who lives at home</string>
+					<key>B</key>
+					<string>His 20 year old daughter who lives with her spouse</string>
+					<key>C</key>
+					<string>Any of his children who want it</string>
+					<key>D</key>
+					<string>Only his wife</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>The word basis in line 2 is closest in meaning to</string>
+					<key>A</key>
+					<string>solution</string>
+					<key>B</key>
+					<string>formula</string>
+					<key>C</key>
+					<string>amount</string>
+					<key>D</key>
+					<string>foundation</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word delicate  in line 7 is closest in meaning to</string>
+					<key>A</key>
+					<string>sensitive</string>
+					<key>B</key>
+					<string>conplicated</string>
+					<key>C</key>
+					<string>necessary</string>
+					<key>D</key>
+					<string>interesting</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<dict>
+		<key>avata</key>
+		<string>avatapromotion.png</string>
+		<key>name</key>
+		<string>Promotions, Pensions and Awards</string>
+		<key>vocabulary</key>
+		<string>15.vpromotionaward</string>
+		<key>listening</key>
+		<dict>
+			<key>audio</key>
+			<string>https://raw.githubusercontent.com/OlalaStudio/600EWT-Listening/master/15%20Promotions%2C%20Pensions.mp3</string>
+			<key>talk</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>Who is talking?</string>
+					<key>A</key>
+					<string>two employees</string>
+					<key>B</key>
+					<string>an award presenter</string>
+					<key>C</key>
+					<string>community volunteers</string>
+					<key>D</key>
+					<string>a professor</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>Who is the audience?</string>
+					<key>A</key>
+					<string>studients</string>
+					<key>B</key>
+					<string>customers</string>
+					<key>C</key>
+					<string>employees</string>
+					<key>D</key>
+					<string>citizens</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>when did the company open?</string>
+					<key>A</key>
+					<string>1965</string>
+					<key>B</key>
+					<string>1975</string>
+					<key>C</key>
+					<string>1985</string>
+					<key>D</key>
+					<string>1995</string>
+				</dict>
+			</array>
+			<key>conversation</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Why will the ceremony be held?</string>
+					<key>A</key>
+					<string>To honor darrell</string>
+					<key>B</key>
+					<string>To boast about production figures</string>
+					<key>C</key>
+					<string>To celebrate the opening of a new office</string>
+					<key>D</key>
+					<string>To present awards</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>When will the ceremony be held?</string>
+					<key>A</key>
+					<string>today</string>
+					<key>B</key>
+					<string>tuesday</string>
+					<key>C</key>
+					<string>tonight</string>
+					<key>D</key>
+					<string>tomorrow</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>What is the speaker&apos;s opinion of Darrell?</string>
+					<key>A</key>
+					<string>he is loyal</string>
+					<key>B</key>
+					<string>he is not productive</string>
+					<key>C</key>
+					<string>he is unimpressive</string>
+					<key>D</key>
+					<string>he is not a hard worker</string>
+				</dict>
+			</array>
+			<key>questionandresponse</key>
+			<array>
+				<string>A</string>
+				<string>C</string>
+			</array>
+			<key>photo</key>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>image</key>
+				<string>promotionsandaward.png</string>
+			</dict>
+		</dict>
+		<key>incomplete</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>When he thought about his long career, he realized that his biggest ___ was in developing the new leaders of the company</string>
+				<key>A</key>
+				<string>achiever</string>
+				<key>B</key>
+				<string>achieved</string>
+				<key>C</key>
+				<string>achievement</string>
+				<key>D</key>
+				<string>achieves</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>She has ___ so much time and energy to the project that her name should appear on the award</string>
+				<key>A</key>
+				<string>contributes</string>
+				<key>B</key>
+				<string>contribution</string>
+				<key>C</key>
+				<string>contributed</string>
+				<key>D</key>
+				<string>contributor</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>Hard work and ___ will help you move up the corporate ladder</string>
+				<key>A</key>
+				<string>dedicated</string>
+				<key>B</key>
+				<string>dedicates</string>
+				<key>C</key>
+				<string>dedication</string>
+				<key>D</key>
+				<string>dedicated</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>C</string>
+				<key>question</key>
+				<string>There is no reason to question her ___ to our company</string>
+				<key>A</key>
+				<string>loyal</string>
+				<key>B</key>
+				<string>loyally</string>
+				<key>C</key>
+				<string>loyalty</string>
+				<key>D</key>
+				<string>layrels</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>B</string>
+				<key>question</key>
+				<string>These microchips are ___ faster and more cheaply in Asia</string>
+				<key>A</key>
+				<string>produce</string>
+				<key>B</key>
+				<string>produced</string>
+				<key>C</key>
+				<string>product</string>
+				<key>D</key>
+				<string>production</string>
+			</dict>
+			<dict>
+				<key>answer</key>
+				<string>A</string>
+				<key>question</key>
+				<string>Because, you are a valued and dedicated employee, we are ___ you to director of the department</string>
+				<key>A</key>
+				<string>promoting</string>
+				<key>B</key>
+				<string>promote</string>
+				<key>C</key>
+				<string>promotion</string>
+				<key>D</key>
+				<string>promoter</string>
+			</dict>
+		</array>
+		<key>reading</key>
+		<dict>
+			<key>letter</key>
+			<string>15.rpromotionaward</string>
+			<key>question</key>
+			<array>
+				<dict>
+					<key>answer</key>
+					<string>C</string>
+					<key>question</key>
+					<string>When will the awards ceremory be held?</string>
+					<key>A</key>
+					<string>October 15</string>
+					<key>B</key>
+					<string>November 5</string>
+					<key>C</key>
+					<string>November 10</string>
+					<key>D</key>
+					<string>November 15</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>D</string>
+					<key>question</key>
+					<string>Who will suggest award recipients?</string>
+					<key>A</key>
+					<string>the personnel manager</string>
+					<key>B</key>
+					<string>the company president</string>
+					<key>C</key>
+					<string>the assistant manager</string>
+					<key>D</key>
+					<string>the company staff members</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>Why does Marilyn freeland think Janet Mcghee deserves an award?</string>
+					<key>A</key>
+					<string>she works on important projects</string>
+					<key>B</key>
+					<string>she always works long hours</string>
+					<key>C</key>
+					<string>she looks to others as an example</string>
+					<key>D</key>
+					<string>she managers the research department</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>A</string>
+					<key>question</key>
+					<string>The word Obviously in line 9 of the first email is closest in meaning to</string>
+					<key>A</key>
+					<string>clearly</string>
+					<key>B</key>
+					<string>quickly</string>
+					<key>C</key>
+					<string>usually</string>
+					<key>D</key>
+					<string>importantly</string>
+				</dict>
+				<dict>
+					<key>answer</key>
+					<string>B</string>
+					<key>question</key>
+					<string>The word dedication  in line 3 of the second email is closest in meaning to</string>
+					<key>A</key>
+					<string>ability</string>
+					<key>B</key>
+					<string>commitment</string>
+					<key>C</key>
+					<string>knowledge</string>
+					<key>D</key>
+					<string>attendance</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</array>
+</plist>
