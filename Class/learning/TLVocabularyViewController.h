@@ -20,7 +20,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *vocabView;
 
-- (IBAction)closeLesson_Action:(id)sender;
 
 - (void)setVocabFile:(NSString*)file;
 

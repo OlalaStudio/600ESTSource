@@ -8,8 +8,12 @@
 
 #import "TLReadingViewController.h"
 #import "TLQuestionTableViewCell.h"
+#import "TLQuestionHeaderCell.h"
 
-@interface TLReadingViewController ()
+@interface TLReadingViewController (){
+    UIBarButtonItem *btscore;
+    UIBarButtonItem *btquestion;
+}
 
 @end
 
@@ -19,15 +23,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.navigationItem setTitle:@"Reading"];
+    
     [_tableview setDelegate:self];
     [_tableview setDataSource:self];
-    [_tableview setAllowsSelection:NO];
-    [_tableview setAllowsMultipleSelection:NO];
+    [_tableview setAllowsSelection:YES];
+    [_tableview setAllowsMultipleSelection:YES];
     [_tableview setAllowsSelectionDuringEditing:NO];
     [_tableview setAllowsMultipleSelectionDuringEditing:NO];
-    [_tableview setSeparatorColor:[UIColor redColor]];
     
-    [_tableview registerNib:[UINib nibWithNibName:@"TLQuestionTableViewCell" bundle:nil] forCellReuseIdentifier:@"readquestion"];
+    [_tableview registerNib:[UINib nibWithNibName:@"TLQuestionTableViewCell" bundle:nil] forCellReuseIdentifier:@"idcellquestion"];
+    [_tableview registerNib:[UINib nibWithNibName:@"TLQuestionHeaderCell" bundle:nil] forHeaderFooterViewReuseIdentifier:@"idheaderquestion"];
+    
+    btscore = [[UIBarButtonItem alloc] initWithTitle:@"score"
+                                               style:UIBarButtonItemStylePlain
+                                              target:self
+                                              action:@selector(showAnwser_Action:)];
+    
+    btquestion = [[UIBarButtonItem alloc] initWithTitle:@"script"
+                                                  style:UIBarButtonItemStylePlain
+                                                 target:self
+                                                 action:@selector(showQuestion_Action:)];
+    
+    self.navigationItem.rightBarButtonItems = @[btquestion,btscore];
     
     uDic = [[NSMutableDictionary alloc] initWithCapacity:0];
     
@@ -35,8 +53,8 @@
     _dialogView.layer.cornerRadius = 3.0;
     _dialogView.layer.borderColor = [UIColor grayColor].CGColor;
     
-    [_tableview setHidden:YES];
-    [_dialogView setHidden:NO];
+    [_tableview setHidden:NO];
+    [_dialogView setHidden:YES];
     
     [self reloadView];
 }
@@ -44,6 +62,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidLayoutSubviews{
+    [self.dialogView setContentOffset:CGPointZero animated:YES];
+    [self.dialogView setContentInset:UIEdgeInsetsZero];
+    
+    [self.dialogView setEditable:NO];
+    [self.dialogView setSelectable:NO];
 }
 
 /*
@@ -75,34 +101,55 @@
 }
 
 -(void)showAnwser{
-    rAnwser = [self findAnwser];
+    
+    NSArray *answers = [_tableview indexPathsForSelectedRows];
+    
+    rAnwser = 0;
     tAnwser = [_question count];
+    
+    for (NSIndexPath *answer in answers) {
+        
+        NSDictionary *question;
+        
+        NSLog(@"question number %ld",(long)answer.section);
+        question = [_question objectAtIndex:answer.section];
+        
+        NSString *dapan = [question valueForKey:@"answer"];
+        
+        rAnwser = rAnwser + [self checkAnswer:answer anwser:dapan];
+    }
+    
+    NSDictionary *lessonDic = [[NSUserDefaults standardUserDefaults] objectForKey:lessonName];
+    NSMutableDictionary *lessonMutableDic = [[NSMutableDictionary alloc] initWithDictionary:lessonDic];
+    [lessonMutableDic setValue:[NSNumber numberWithInteger:rAnwser] forKey:@"reading"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:lessonMutableDic forKey:lessonName];
     
     [super showAnwser];
 }
 
--(NSInteger)findAnwser{
+-(int)checkAnswer:(NSIndexPath*)selection anwser:(NSString*)anwser{
     
-    NSInteger count = 0;
+    int dapan = -1;
     
-    NSInteger session = [_tableview numberOfSections];
-    for (int i=0; i<session; i++) {
-        NSInteger row = [_tableview numberOfRowsInSection:i];
-        
-        for (int j=0; j<row; j++) {
-            NSIndexPath *indexpath = [NSIndexPath indexPathForRow:j inSection:i];
-            
-            AnwserState anwser = [[uDic objectForKey:indexpath] integerValue];
-            
-            NSDictionary* itemDic = [_question objectAtIndex:j];
-            
-            if ([self checkAnwser:anwser valid:[itemDic objectForKey:@"answer"]]) {
-                count++;
-            }
-        }
+    if ([anwser isEqualToString:@"A"]) {
+        dapan = 0;
+    }
+    else if ([anwser isEqualToString:@"B"]){
+        dapan = 1;
+    }
+    else if ([anwser isEqualToString:@"C"]){
+        dapan = 2;
+    }
+    else if ([anwser isEqualToString:@"D"]){
+        dapan = 3;
     }
     
-    return count;
+    if (dapan == selection.row) {
+        return 1;
+    }
+    
+    return 0;
 }
 
 -(BOOL)checkAnwser:(AnwserState)uAnwser valid:(NSString*)vAnwser{
@@ -128,53 +175,103 @@
     
     return YES;
 }
-
 #pragma mark -
 #pragma mark UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_question count];
 }
 
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    TLQuestionTableViewCell *cell = (TLQuestionTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"readquestion"
-                                                                                              forIndexPath:indexPath];
+    return 4;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44;
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    if (!cell) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"readquestion"];
-    }
+    TLQuestionHeaderCell *cell = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"idheaderquestion"];
     
-    [cell setDelegate:self];
-    [cell setQNumber:indexPath.row + 1];
-    [cell setData:[_question objectAtIndex:indexPath.row]];
-    [cell setIndex:indexPath];
+    /* Section header is in 0th index... */
+    NSDictionary *qDic = [_question objectAtIndex:section];
+    
+    [cell.label setText:[qDic valueForKey:@"question"]];
+    [cell.label setTextColor:[UIColor grayColor]];
     
     return cell;
 }
 
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    TLQuestionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idcellquestion"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [cell.label setFont:[UIFont systemFontOfSize:12]];
+    [cell.label setTextColor:[UIColor grayColor]];
+    
+    if([[tableView indexPathsForSelectedRows] containsObject:indexPath]){
+        cell.label.textColor = [UIColor orangeColor];
+    }
+    
+    NSDictionary *qDic = [_question objectAtIndex:indexPath.section];
+    NSString    *qNum = @"";
+    
+    switch (indexPath.row) {
+        case 0:
+            qNum = [NSString stringWithFormat:@"A. %@",[qDic valueForKey:@"A"]];
+            break;
+        case 1:
+            qNum = [NSString stringWithFormat:@"B. %@",[qDic valueForKey:@"B"]];
+            break;
+        case 2:
+            qNum = [NSString stringWithFormat:@"C. %@",[qDic valueForKey:@"C"]];
+            break;
+        case 3:
+            qNum = [NSString stringWithFormat:@"D. %@",[qDic valueForKey:@"D"]];
+            break;
+        default:
+            break;
+    }
+    
+    cell.label.text = qNum;
+    
+    return cell;
+}
+
+-(NSIndexPath*)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSArray *indexpaths = [tableView indexPathsForSelectedRows];
+    for (NSIndexPath* path in indexpaths) {
+        
+        if (path.section == indexPath.section)
+        {
+            [tableView deselectRowAtIndexPath:path animated:NO];
+            
+            [(TLQuestionTableViewCell*)[tableView cellForRowAtIndexPath:path] label].textColor = [UIColor grayColor];
+        }
+    }
+    
+    TLQuestionTableViewCell *cell = (TLQuestionTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    cell.label.textColor = [UIColor orangeColor];
+    
+    return indexPath;
+}
+
+
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //update data
-    AnwserState state = [[uDic objectForKey:indexPath] integerValue];
-    [(TLTableViewCellBase*)cell updateSelection:state];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 190;
 }
 
 #pragma mark -
 #pragma mark - UITableCellView Delegate
--(void)didSelectAnwser:(AnwserState)anwser forCell:(TLTableViewCellBase *)cell{
-    
-    NSIndexPath *indexpath = [cell index];
-    
-    [uDic setObject:[NSNumber numberWithInteger:anwser] forKey:indexpath];
-}
 - (IBAction)showAnwser_Action:(id)sender {
     [self showAnwser];
 }

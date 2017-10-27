@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef enum State: NSUInteger {
-    kunknow,
-    kPlay,
-    kPause,
+    kUnknowState,
+    kPlayState,
+    kPauseState,
 }State;
 
 @protocol PlayerButtonDelegate <NSObject>

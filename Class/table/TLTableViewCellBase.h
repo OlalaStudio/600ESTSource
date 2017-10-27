@@ -7,14 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum : NSUInteger {
-    kUnknow  = 0,
-    kAnwserA = 1,
-    kAnwserB = 2,
-    kAnwserC = 3,
-    kAnwserD = 4,
-} AnwserState;
+#import "commonDefines.h"
 
 #define FONT_SIZE       18
 #define SELECT_COLOR    [UIColor greenColor]

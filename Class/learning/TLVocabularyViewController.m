@@ -20,14 +20,15 @@
     
     [self reloadView];
     
-     _startLearning = NO;
-    
-    //show ads
-    _interstitial = [self createAndLoadInterstitial];
+    [self.navigationItem setTitle:@"Vocabulary"];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    _adsloaded = NO;
+    [super viewWillAppear:animated];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,43 +66,11 @@
     
 }
 
-#pragma mark -
-#pragma mark UI Action
-- (IBAction)closeLesson_Action:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(GADInterstitial*)createAndLoadInterstitial
-{
-    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-4039533744360639/2124056506"];
+-(void)viewDidLayoutSubviews{
+    [self.vocabView setContentOffset:CGPointZero animated:YES];
+    [self.vocabView setContentInset:UIEdgeInsetsZero];
     
-    GADRequest *request = [GADRequest request];
-//        request.testDevices = @[kGADSimulatorID,@"aea500effe80e30d5b9edfd352b1602d"];
-    
-    [_interstitial setDelegate:self];
-    [_interstitial loadRequest:request];
-    
-    _adsloaded = NO;
-    
-    return _interstitial;
-}
-
-#pragma mark - Ads Delegate
--(void)interstitialDidReceiveAd:(GADInterstitial *)ad
-{
-    if (!_startLearning) {
-        [ad presentFromRootViewController:self];
-        _adsloaded = YES;
-    }
-    else{
-        _interstitial = ad;
-        _adsloaded = NO;
-    }
-}
-
--(void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad
-{
-    _adsloaded = NO;
-    NSLog(@"Fail to load interstitial ads");
+    [self.vocabView setEditable:NO];
+    [self.vocabView setSelectable:NO];
 }
 @end

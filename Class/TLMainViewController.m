@@ -7,8 +7,15 @@
 //
 
 #import "TLMainViewController.h"
+#import "commonDefines.h"
 
-@interface TLMainViewController ()
+@import GoogleMobileAds;
+
+@interface TLMainViewController (){
+    BOOL            _adsloaded;
+    NSInteger        displayCount;
+    GADInterstitial *_interstitial;
+}
 
 @end
 
@@ -35,7 +42,7 @@
     [_tableView setDelegate:self];
     [_tableView setDataSource:self];
     [_tableView setAllowsMultipleSelection:NO];
-    [_tableView setSeparatorColor:[UIColor redColor]];
+    [_tableView setBackgroundColor:[UIColor whiteColor]];
     
     [_tableView registerNib:[UINib nibWithNibName:@"TLTableViewCell" bundle:nil] forCellReuseIdentifier:@"idCellNormal"];
     
@@ -45,11 +52,25 @@
     
     //User data
     _userData = [[NSMutableDictionary alloc] initWithDictionary:[self userData]];
+    
+    [self.navigationController.navigationBar setBarTintColor:COLOR_BASE];
+    [self.navigationController.navigationBar setTintColor:COLOR_TEXT];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if (!_adsloaded) {
+        //show ads
+        _interstitial = [self createAndLoadInterstitial];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -62,6 +83,42 @@
     [_adBannerView loadRequest:request];
     
     [self runRateApp];
+    [_tableView reloadData];
+    
+    displayCount++;
+    
+    if (displayCount % 5 == 0 && _adsloaded == YES) {
+        [_interstitial presentFromRootViewController:self];
+        _adsloaded = NO;
+    }
+}
+
+-(GADInterstitial*)createAndLoadInterstitial
+{
+    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-4039533744360639/2124056506"];
+    
+    GADRequest *request = [GADRequest request];
+//    request.testDevices = @[kGADSimulatorID,@"aea500effe80e30d5b9edfd352b1602d"];
+    
+    [_interstitial setDelegate:self];
+    [_interstitial loadRequest:request];
+    
+    _adsloaded = NO;
+    
+    return _interstitial;
+}
+
+#pragma mark - Ads Delegate
+-(void)interstitialDidReceiveAd:(GADInterstitial *)ad
+{
+    _interstitial = ad;
+    _adsloaded = YES;
+}
+
+-(void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad
+{
+    _adsloaded = NO;
+    NSLog(@"Fail to load interstitial ads");
 }
 
 /*
@@ -112,6 +169,20 @@
     }];
 }
 
+#pragma mark - TLLessonDelegate
+-(void)didClickStartLesson:(NSInteger)tag{
+    
+    NSDictionary *lData = [metaArr objectAtIndex:tag];
+    
+    TLSelectionViewController *selectionview = (TLSelectionViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"idselectionview"];
+    [selectionview setData:lData];
+    [selectionview setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+
+    [self.navigationController pushViewController:selectionview animated:YES];
+    
+    NSLog(@"Start lesson %ld", (long)tag);
+}
+
 -(void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error
 {
     NSLog(@"load banner fail");
@@ -151,23 +222,36 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCellNormal"];
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    cell.textLabel.textColor = [UIColor grayColor];
-    
     NSDictionary *item  = [metaArr objectAtIndex:indexPath.row];
     NSString *title     = [item objectForKey:@"name"];
     NSString *avate     = [item objectForKey:@"avata"];
     
+    NSDictionary *registerField = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:0], @"vocabulary"
+                                   ,[NSNumber numberWithInteger:0], @"listening"
+                                   ,[NSNumber numberWithInteger:0], @"incomplete"
+                                   ,[NSNumber numberWithInteger:0], @"reading", nil];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:registerField forKey:title]];
+    
+    TLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCellNormal"];
+    
     [cell setDisplayTitle:title];
     [cell setDisplayAvata:avate];
+    [cell setTag:indexPath.row];
+    [cell setLessonDelegate:self];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [(TLTableViewCell*)cell updateUI];
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     NSDictionary *lData = [metaArr objectAtIndex:indexPath.row];
     
     NSLog(@"%@",lData);
@@ -176,11 +260,12 @@
     [lessonViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
     [lessonViewController setLessonData:lData];
     [self presentViewController:lessonViewController animated:YES completion:nil];
+     */
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 270;
 }
 
 #pragma mark - Setting

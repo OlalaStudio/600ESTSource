@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Appirater.h"
-#import "TLTabBarViewController.h"
+#import "TLSelectionViewController.h"
 #import "TLTableViewCell.h"
 
 @import GoogleMobileAds;
 
-@interface TLMainViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,GADBannerViewDelegate,AppiraterDelegate>
+@interface TLMainViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,GADInterstitialDelegate,TLLessonDelegate,GADBannerViewDelegate,AppiraterDelegate>
 {
     NSMutableDictionary     *_userData;
     GADBannerView           *_adBannerView;

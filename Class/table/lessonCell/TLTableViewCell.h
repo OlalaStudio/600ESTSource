@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TLLessonDelegate <NSObject>
+
+-(void)didClickStartLesson:(NSInteger)tag;
+
+@end
+
 typedef enum LessonState: NSUInteger {
     kNone,
     kPass,
@@ -18,13 +24,28 @@ typedef enum LessonState: NSUInteger {
     LessonState     _state;
 }
 
+@property id<TLLessonDelegate>  lessonDelegate;
 @property (assign,nonatomic) LessonState  state;
 
 @property (weak, nonatomic) IBOutlet UIImageView    *avata;
 @property (weak, nonatomic) IBOutlet UILabel        *title;
-@property (weak, nonatomic) IBOutlet UILabel        *lastOpenDate;
+
+@property (weak, nonatomic) IBOutlet UIImageView *readingBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *readingPercen;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView    *listeningBackground;
+@property (weak, nonatomic) IBOutlet UIImageView    *listeningPercen;
+
+@property (weak, nonatomic) IBOutlet UILabel        *lbListeningPercen;
+@property (weak, nonatomic) IBOutlet UILabel        *lbReadingPercen;
+
+@property (weak, nonatomic) IBOutlet UIButton       *btStart;
 
 -(void)setDisplayTitle:(NSString*)title;
 -(void)setDisplayAvata:(NSString*)image;
+-(void)updateUI;
+
+- (IBAction)startLesson_Action:(id)sender;
 
 @end

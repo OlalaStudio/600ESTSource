@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="idqnr" id="Eug-xk-uXr" customClass="TLQnRCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="389"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="389"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-KW-4Os" customClass="TLQnRView">
+                        <rect key="frame" x="0.0" y="73.5" width="424" height="120"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbW-cu-brB" customClass="TLButton">
+                                <rect key="frame" x="99" y="38" width="46" height="44"/>
+                                <state key="normal" image="btAunselect.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ3-GQ-PwG" customClass="TLButton">
+                                <rect key="frame" x="189" y="38" width="46" height="44"/>
+                                <state key="normal" image="btBunselect.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCP-vh-hLt" customClass="TLButton">
+                                <rect key="frame" x="279" y="38" width="46" height="44"/>
+                                <state key="normal" image="btCunselect.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-Zj-BIq">
+                                <rect key="frame" x="8" y="8" width="9" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="heq-0O-0Y0">
+                                <rect key="frame" x="99" y="5" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrect.png" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-j0-Xuu">
+                                <rect key="frame" x="135" y="8" width="27" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YCP-vh-hLt" firstAttribute="centerX" secondItem="N4C-KW-4Os" secondAttribute="centerX" constant="90" id="2yh-fU-G50"/>
+                            <constraint firstItem="Ic8-Zj-BIq" firstAttribute="leading" secondItem="N4C-KW-4Os" secondAttribute="leading" constant="8" id="EaT-Ih-c5c"/>
+                            <constraint firstItem="GbW-cu-brB" firstAttribute="centerY" secondItem="N4C-KW-4Os" secondAttribute="centerY" id="LzL-2K-vDK"/>
+                            <constraint firstItem="YCP-vh-hLt" firstAttribute="centerY" secondItem="N4C-KW-4Os" secondAttribute="centerY" id="Mcr-kC-FRl"/>
+                            <constraint firstItem="GbW-cu-brB" firstAttribute="centerX" secondItem="N4C-KW-4Os" secondAttribute="centerX" constant="-90" id="Pj1-YG-Gsg"/>
+                            <constraint firstItem="pJ3-GQ-PwG" firstAttribute="centerY" secondItem="N4C-KW-4Os" secondAttribute="centerY" id="hFp-tP-bj7"/>
+                            <constraint firstAttribute="height" constant="120" id="miX-f6-4eW"/>
+                            <constraint firstItem="pJ3-GQ-PwG" firstAttribute="centerX" secondItem="N4C-KW-4Os" secondAttribute="centerX" id="n3s-WA-Udw"/>
+                            <constraint firstItem="Ic8-Zj-BIq" firstAttribute="top" secondItem="N4C-KW-4Os" secondAttribute="top" constant="8" id="s2z-yy-RQm"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="btA" destination="GbW-cu-brB" id="FPf-dH-3Tr"/>
+                            <outlet property="btB" destination="pJ3-GQ-PwG" id="F07-ts-AyO"/>
+                            <outlet property="btC" destination="YCP-vh-hLt" id="wTT-QC-oEv"/>
+                            <outlet property="correcticon" destination="heq-0O-0Y0" id="zz1-JC-jid"/>
+                            <outlet property="incorrecticon" destination="OsL-j0-Xuu" id="Z1J-c9-5D1"/>
+                        </connections>
+                    </view>
+                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoD-9t-1y0" customClass="TLQnRView">
+                        <rect key="frame" x="0.0" y="195.5" width="424" height="120"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toE-kE-x0B" customClass="TLButton">
+                                <rect key="frame" x="99" y="38" width="46" height="44"/>
+                                <state key="normal" image="btAunselect.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcD-2I-ngt" customClass="TLButton">
+                                <rect key="frame" x="189" y="38" width="46" height="44"/>
+                                <state key="normal" image="btBunselect.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-NT-4rY" customClass="TLButton">
+                                <rect key="frame" x="279" y="38" width="46" height="44"/>
+                                <state key="normal" image="btCunselect.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI2-tJ-xRl">
+                                <rect key="frame" x="8" y="8" width="11.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrect.png" translatesAutoresizingMaskIntoConstraints="NO" id="smx-Wl-go6">
+                                <rect key="frame" x="140" y="18" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPG-Eq-uwc">
+                                <rect key="frame" x="83" y="18" width="31" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="toE-kE-x0B" firstAttribute="centerY" secondItem="UoD-9t-1y0" secondAttribute="centerY" id="39D-dT-UNJ"/>
+                            <constraint firstItem="toE-kE-x0B" firstAttribute="centerX" secondItem="UoD-9t-1y0" secondAttribute="centerX" constant="-90" id="FTJ-uu-DIY"/>
+                            <constraint firstItem="UcD-2I-ngt" firstAttribute="centerX" secondItem="UoD-9t-1y0" secondAttribute="centerX" id="Fz3-Pp-XRe"/>
+                            <constraint firstItem="UcD-2I-ngt" firstAttribute="centerY" secondItem="UoD-9t-1y0" secondAttribute="centerY" id="PWa-Wf-KiV"/>
+                            <constraint firstAttribute="height" constant="120" id="SIb-UE-i1K"/>
+                            <constraint firstItem="Uak-NT-4rY" firstAttribute="centerY" secondItem="UoD-9t-1y0" secondAttribute="centerY" id="fLF-zs-iBq"/>
+                            <constraint firstItem="sI2-tJ-xRl" firstAttribute="leading" secondItem="UoD-9t-1y0" secondAttribute="leading" constant="8" id="gDL-oj-F3p"/>
+                            <constraint firstItem="Uak-NT-4rY" firstAttribute="centerX" secondItem="UoD-9t-1y0" secondAttribute="centerX" constant="90" id="p8c-wp-awC"/>
+                            <constraint firstItem="sI2-tJ-xRl" firstAttribute="top" secondItem="UoD-9t-1y0" secondAttribute="top" constant="8" id="t4r-qy-eb6"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="btA" destination="toE-kE-x0B" id="dIi-vE-ivW"/>
+                            <outlet property="btB" destination="UcD-2I-ngt" id="P2V-gw-6fF"/>
+                            <outlet property="btC" destination="Uak-NT-4rY" id="nyq-3U-IeS"/>
+                            <outlet property="correcticon" destination="iPG-Eq-uwc" id="1zO-ee-c6Y"/>
+                            <outlet property="incorrecticon" destination="smx-Wl-go6" id="coC-hp-dlg"/>
+                        </connections>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question &amp; Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxx-vb-puq">
+                        <rect key="frame" x="8" y="30" width="408" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Mxx-vb-puq" firstAttribute="top" secondItem="Eug-xk-uXr" secondAttribute="top" constant="30" id="4Gr-zL-hK6"/>
+                <constraint firstItem="N4C-KW-4Os" firstAttribute="centerY" secondItem="Eug-xk-uXr" secondAttribute="centerY" constant="-61" id="Hs3-Ph-ppa"/>
+                <constraint firstAttribute="trailing" secondItem="N4C-KW-4Os" secondAttribute="trailing" id="Iha-E5-BPN"/>
+                <constraint firstAttribute="trailing" secondItem="Mxx-vb-puq" secondAttribute="trailing" constant="8" id="MO5-AE-gIq"/>
+                <constraint firstItem="N4C-KW-4Os" firstAttribute="leading" secondItem="Eug-xk-uXr" secondAttribute="leading" id="OBM-X0-2fH"/>
+                <constraint firstItem="UoD-9t-1y0" firstAttribute="leading" secondItem="Eug-xk-uXr" secondAttribute="leading" id="k3h-PJ-N0C"/>
+                <constraint firstAttribute="trailing" secondItem="UoD-9t-1y0" secondAttribute="trailing" id="odI-lZ-Akc"/>
+                <constraint firstItem="UoD-9t-1y0" firstAttribute="centerY" secondItem="Eug-xk-uXr" secondAttribute="centerY" constant="61" id="pSm-md-30B"/>
+                <constraint firstItem="Mxx-vb-puq" firstAttribute="leading" secondItem="Eug-xk-uXr" secondAttribute="leading" constant="8" id="tv6-qp-alk"/>
+            </constraints>
+            <size key="customSize" width="424" height="389"/>
+            <connections>
+                <outlet property="lbTitle" destination="Mxx-vb-puq" id="nOd-uN-32D"/>
+                <outlet property="question1" destination="N4C-KW-4Os" id="NwH-zb-baT"/>
+                <outlet property="question2" destination="UoD-9t-1y0" id="ej7-Cw-KqX"/>
+            </connections>
+            <point key="canvasLocation" x="59" y="50.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="btAunselect.png" width="46" height="44"/>
+        <image name="btBunselect.png" width="46" height="44"/>
+        <image name="btCunselect.png" width="46" height="44"/>
+        <image name="correct.png" width="64" height="70"/>
+        <image name="incorrect.png" width="64" height="70"/>
+    </resources>
+</document>

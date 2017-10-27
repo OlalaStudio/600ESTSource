@@ -7,10 +7,12 @@
 //
 
 #import "TLLessonViewBaseController.h"
-#import "TLTableViewCellBase.h"
+#import "TLCollectionViewCellBase.h"
 #import "PlayerBarView.h"
 
-@interface TLListeningViewController : TLLessonViewBaseController<UITableViewDelegate,UITableViewDataSource,TLTableViewCellDelegate,PlayerBarViewDelegate>
+@import AnimatedCollectionViewLayout;
+
+@interface TLListeningViewController : TLLessonViewBaseController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,TLCollectionViewCellDelegate,PlayerBarViewDelegate>
 {
     NSString        *_audio;
     NSArray         *_conversation;
@@ -21,8 +23,9 @@
     NSMutableDictionary *uDic;
 }
 
-@property (weak, nonatomic) IBOutlet PlayerBarView  *playerBar;
-@property (weak, nonatomic) IBOutlet UITableView    *tableview;
+@property (weak, nonatomic) IBOutlet PlayerBarView      *playerBar;
+@property (weak, nonatomic) IBOutlet UICollectionView   *collectview;
+
 
 - (IBAction)showAnwser_Action:(id)sender;
 

@@ -16,13 +16,104 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-4039533744360639~9786924109"];
     
+    UIStoryboard *storyboard;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        storyboard = [UIStoryboard storyboardWithName:@"Main_ipad" bundle:nil];
+    }
+    else{
+        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    }
+    
+    UIViewController *viewcontroller = [storyboard instantiateViewControllerWithIdentifier:@"idrootview"];
+    self.window.rootViewController = viewcontroller;
+    
+    //register notification
+    UIUserNotificationCategory *notiSetting = [[UIUserNotificationCategory alloc] init];
+    NSSet *set = [NSSet setWithObject:notiSetting];
+    
+    UIUserNotificationSettings *notificationsetting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert   categories:set];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationsetting];
+    
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
+    
+    NSString *strBody = @"";
+    int index = random() % 3;
+    if (index == 0) {
+        strBody = @"Have a nice day!\n.Take your time and enjoy the lesson.";
+    }
+    else if (index == 1){
+        strBody = @"Good morning!\nHow are you today?";
+    }
+    else if (index == 2){
+        strBody = @"Hi~\nLet's study together.";
+    }
+    
+    [self createNotificationAt:8 alertBody:strBody];
+    
+    index = random() % 3;
+    if (index == 0) {
+        strBody = @"Hey!\nComeback and take the lessons";
+    }
+    else if (index == 1){
+        strBody = @"Excuse Me!\nAre you free now?";
+    }
+    else if (index == 2){
+        strBody = @"Hi~\nMay I help you?.";
+    }
+    
+    index = rand() % 2;
+    if (index == 0) {
+        [self createNotificationAt:14 alertBody:strBody];
+    }
+    else{
+        [self createNotificationAt:19 alertBody:strBody];
+    }
+
     return YES;
+}
+
+-(void)createNotificationAt:(int)hour alertBody:(NSString*)body{
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond)
+                                               fromDate:[NSDate date]];
+    [components setHour: hour];
+    [components setMinute: 5];
+    [components setSecond: 0];
+    
+    [calendar setTimeZone: [NSTimeZone defaultTimeZone]];
+    NSDate *fireDate = [calendar dateFromComponents:components];
+    
+    components.day = components.day+1;
+    fireDate = [calendar dateFromComponents:components];
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    
+    notification.fireDate = fireDate;
+    notification.alertBody = body;
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    notification.repeatInterval = NSCalendarUnitDay;
+    notification.applicationIconBadgeNumber = 1;
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+    UIApplicationState appState = [[UIApplication sharedApplication] applicationState];
+    
+    if (appState == UIApplicationStateActive) {
+        [[UIApplication sharedApplication] cancelLocalNotification:notification];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

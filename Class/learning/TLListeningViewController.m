@@ -7,11 +7,18 @@
 //
 
 #import "TLListeningViewController.h"
-#import "TLPhotoTableViewCell.h"
-#import "TLQnRTableViewCell.h"
 #import "TLQuestionTableViewCell.h"
+#import "TLPhotoCollectionViewCell.h"
+#import "TLQnRCollectionViewCell.h"
+#import "TLQuestionCollectionViewCell.h"
 
-@interface TLListeningViewController ()
+@import EZLoadingActivity;
+@import AnimatedCollectionViewLayout;
+
+@interface TLListeningViewController (){
+    CategoryFile _category;
+    BOOL isShowAnwser;
+}
 
 @end
 
@@ -21,18 +28,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [_tableview setDelegate:self];
-    [_tableview setDataSource:self];
+    [self.navigationItem setTitle:@"Listening"];
     
-    [_tableview registerNib:[UINib nibWithNibName:@"TLPhotoTableViewCell" bundle:nil] forCellReuseIdentifier:@"photocell"];
-    [_tableview registerNib:[UINib nibWithNibName:@"TLQnRTableViewCell" bundle:nil] forCellReuseIdentifier:@"qnr"];
-    [_tableview registerNib:[UINib nibWithNibName:@"TLQuestionTableViewCell" bundle:nil] forCellReuseIdentifier:@"conversation"];
+    [_collectview setDelegate:self];
+    [_collectview setDataSource:self];
+    [_collectview setPagingEnabled:YES];
+    [_collectview setBackgroundColor:[UIColor colorWithRed:193.0f/255.0f green:193.0f/255.0f blue:193.0f/255.0f alpha:1.0f]];
+    
+    [_collectview registerNib:[UINib nibWithNibName:@"TLPhotoCollectionviewCell" bundle:nil] forCellWithReuseIdentifier:@"idphoto"];
+    [_collectview registerNib:[UINib nibWithNibName:@"TLQnRCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"idqnr"];
+    [_collectview registerNib:[UINib nibWithNibName:@"TLQuestionCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"idquestion"];
     
     uDic = [[NSMutableDictionary alloc] initWithCapacity:0];
     
+    _category = kCategory_Internet;
+    
     [_playerBar setPlayerURL:_audio];
     [_playerBar setPlayerBarDelegate:self];
+    [_playerBar setCategory:_category];
     [_playerBar loadContent];
+    
+    isShowAnwser = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,49 +84,250 @@
     
 }
 
--(void)showAnwser{
-    rAnwser = [self findAnwser];
-    tAnwser = 1 + 2  + [_conversation count] + [_talk count];
-    
-    [super showAnwser];
+#pragma mark <UICollectionViewDataSource>
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+#warning Incomplete implementation, return the number of sections
+    return 4;
 }
 
--(NSInteger)findAnwser{
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of items
+    
+    if (section == 0) {
+        return 1;   //photo 1 object
+    }
+    else if (section == 1){
+        return 1;  //QnR 1 object
+    }
+    else if (section == 2){
+        return [_conversation count];
+    }
+    else if (section == 3){
+        return [_talk count];
+    }
+    
+    return 0;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        TLPhotoCollectionViewCell *cell = (TLPhotoCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"idphoto" forIndexPath:indexPath];
+        
+        // Configure the cell
+        cell.backgroundColor = [UIColor whiteColor];
+        
+        [cell setDelegate:self];
+        [cell setIndex:indexPath];
+        [cell setTitle:@"Photo"];
+        [cell setPhotoData:_photo];
+        
+        return cell;
+    }
+    else if (indexPath.section == 1)
+    {
+        //idqnr
+        
+        TLQnRCollectionViewCell *cell = (TLQnRCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"idqnr" forIndexPath:indexPath];
+        
+        //configure the cell
+        cell.backgroundColor = [UIColor whiteColor];
+        
+        [cell setDelegate:self];
+        [cell setIndex:indexPath];
+        [cell setTitle:@"Question & Response"];
+        [cell setQnRdata:_questionNresponse];
+        
+        return cell;
+    }
+    else if (indexPath.section == 2){
+        TLQuestionCollectionViewCell *cell = (TLQuestionCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"idquestion" forIndexPath:indexPath];
+        
+        cell.backgroundColor = [UIColor whiteColor];
+        
+        [cell setDelegate:self];
+        [cell setIndex:indexPath];
+        [cell setTitle:@"Conversation"];
+        [cell setupQuestionData:[_conversation objectAtIndex:indexPath.row]];
+        
+        return cell;
+    }
+    else if (indexPath.section == 3){
+        TLQuestionCollectionViewCell *cell = (TLQuestionCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"idquestion" forIndexPath:indexPath];
+        
+        cell.backgroundColor = [UIColor whiteColor];
+        
+        [cell setDelegate:self];
+        [cell setIndex:indexPath];
+        [cell setTitle:@"Short Talk"];
+        [cell setupQuestionData:[_talk objectAtIndex:indexPath.row]];
+        
+        return cell;
+    }
+    
+    return nil;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    //update data
+    
+    AnwserState state = [[uDic objectForKey:indexPath] integerValue];
+    
+    [(TLCollectionViewCellBase*)cell hideCheckAnwser];
+    
+    if ([cell isKindOfClass:[TLQnRCollectionViewCell class]]) {
+        [(TLCollectionViewCellBase*)cell setIndex:indexPath];
+        [(TLCollectionViewCellBase*)cell updateSelection:state];
+        
+        indexPath = [NSIndexPath indexPathForRow:1 inSection:indexPath.section];
+        state = [[uDic objectForKey:indexPath] integerValue];
+        
+        [(TLCollectionViewCellBase*)cell setIndex:indexPath];
+        [(TLCollectionViewCellBase*)cell updateSelection:state];
+    }
+    else{
+        [(TLCollectionViewCellBase*)cell setIndex:indexPath];
+        [(TLCollectionViewCellBase*)cell updateSelection:state];
+    }
+    
+    if (isShowAnwser) {
+        [(TLCollectionViewCellBase*)cell showAnwser];
+    }
+}
+
+#pragma mark <UICollectionViewLayoutDelegate>
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return CGSizeMake(collectionView.bounds.size.width/1, collectionView.bounds.size.height/1);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsZero;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 0;
+}
+
+#pragma mark - 
+#pragma mark - Collection Cell View
+-(void)didSelectAnwser:(AnwserState)anwser forCell:(TLCollectionViewCellBase *)cell{
+    
+    NSIndexPath *indexpath = [cell index];
+    [uDic setObject:[NSNumber numberWithInteger:anwser] forKey:indexpath];
+}
+
+
+#pragma mark - Player Bar Delegate
+-(void)didClickPlayer:(CategoryFile)filetype{
+    
+    if (filetype == kCategory_Internet) {
+        [EZLoadingActivity show:@"Loading ..." disableUI:YES];
+    }
+    
+    isShowAnwser = NO;
+    
+    [_collectview reloadData];
+}
+
+-(void)didClickReplayPlayer:(CategoryFile)filetype{
+    
+    if (isShowAnwser) {
+        isShowAnwser = NO;
+        
+        [uDic removeAllObjects];
+        [_collectview reloadData];
+    }
+}
+
+-(void)didFinishPlayer:(CategoryFile)filetype{
+    //show score
+    NSLog(@"Show score");
+    
+    isShowAnwser = YES;
     
     NSInteger count = 0;
     
-    NSInteger session = [_tableview numberOfSections];
+    NSInteger session = [_collectview numberOfSections];
     for (int i=0; i<session; i++) {
-        NSInteger row = [_tableview numberOfRowsInSection:i];
+        NSInteger row = [_collectview numberOfItemsInSection:i];
         
         for (int j=0; j<row; j++) {
             NSIndexPath *indexpath = [NSIndexPath indexPathForRow:j inSection:i];
             
-            AnwserState anwser = [[uDic objectForKey:indexpath] integerValue];
+            AnwserState state = [[uDic objectForKey:indexpath] integerValue];
             
-            NSString *vAnwser;
-            if (i == 0) { //photo
-              vAnwser = [_photo valueForKey:@"answer"];
-            }
-            else if (i == 1){//question and response
-                vAnwser = [_questionNresponse objectAtIndex:j];
-            }
-            else if (i == 2){//conversation
-                NSDictionary *itemDic = [_conversation objectAtIndex:j];
-                vAnwser = [itemDic valueForKey:@"answer"];
-            }
-            else if (i == 3){//short talk
-                NSDictionary *itemDic = [_talk objectAtIndex:j];
-                vAnwser = [itemDic valueForKey:@"answer"];
+            NSString *strValid = @"";
+            
+            switch (i) {
+                case 0:
+                    strValid = [_photo objectForKey:@"answer"];
+                    break;
+                case 1:
+                    strValid = [_questionNresponse objectAtIndex:0];
+                    if ([self checkAnwser:state valid:strValid]) {
+                        count++;
+                    }
+                    
+                    state = [[uDic objectForKey:[NSIndexPath indexPathForRow:1 inSection:indexpath.section]] integerValue];
+                    strValid = [_questionNresponse objectAtIndex:1];
+                    break;
+                case 2:
+                    strValid = [[_conversation objectAtIndex:j] valueForKey:@"answer"];
+                    break;
+                case 3:
+                    strValid = [[_talk objectAtIndex:j] valueForKey:@"answer"];
+                    break;
+                default:
+                    break;
             }
             
-            if ([self checkAnwser:anwser valid:vAnwser]) {
+            if ([self checkAnwser:state valid:strValid]) {
                 count++;
             }
         }
     }
     
-    return count;
+    tAnwser = 0;
+    rAnwser = 0;
+    
+    tAnwser = 1 + 2 + _conversation.count + _talk.count;
+    rAnwser = count;
+    
+    [self showAnwser];
+    
+    NSDictionary *lessonDic = [[NSUserDefaults standardUserDefaults] objectForKey:lessonName];
+    NSMutableDictionary *lessonMutableDic = [[NSMutableDictionary alloc] initWithDictionary:lessonDic];
+    [lessonMutableDic setValue:[NSNumber numberWithInteger:rAnwser] forKey:@"listening"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:lessonMutableDic forKey:lessonName];
+    
+    [_collectview reloadData];
+}
+
+-(void)didReadyPlayer:(CategoryFile)filetype ready:(BOOL)ready{
+    
+    if (filetype == kCategory_Internet) {
+        if (ready == YES) {
+            [EZLoadingActivity hide:YES animated:YES];
+        }
+        else{
+            [EZLoadingActivity hide:NO animated:YES];
+        }
+    }
+}
+
+-(void)didUpdateCurrentTime:(NSTimeInterval)ctime{
+    
 }
 
 -(BOOL)checkAnwser:(AnwserState)uAnwser valid:(NSString*)vAnwser{
@@ -135,147 +352,5 @@
     }
     
     return YES;
-}
-
-#pragma mark -
-#pragma mark UITableViewDelegate
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    if (section == 0) {
-        return 1;
-    }
-    else if (section == 1){
-        return 2;
-    }
-    else if (section == 2 || section == 3){
-        return 3;
-    }
-    
-    return 0;
-}
-
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    
-    if (section == 0) {
-        return @"Photo";
-    }
-    else if (section == 1){
-        return @"Question and Response";
-    }
-    else if (section == 2){
-        return @"Conversation";
-    }
-    else if (section == 3){
-        return @"Short Talk";
-    }
-    
-    return @"";
-}
-
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (indexPath.section == 0) { //photo
-        TLPhotoTableViewCell *cell = [_tableview dequeueReusableCellWithIdentifier:@"photocell"];
-        [cell setDelegate:self];
-        [cell setQNumber:indexPath.row + 1];
-        [cell setData:_photo];
-        [cell setIndex:indexPath];
-        
-        return cell;
-    }
-    else if (indexPath.section == 1){ //Question and Response
-        TLQnRTableViewCell *cell = [_tableview dequeueReusableCellWithIdentifier:@"qnr"];
-        [cell setDelegate:self];
-        [cell setQNumber:indexPath.section + indexPath.row + 1];
-        [cell setData:[_questionNresponse objectAtIndex:indexPath.row]];
-        [cell setIndex:indexPath];
-        
-        return cell;
-    }
-    else if(indexPath.section == 2){//Conversation
-        TLQuestionTableViewCell *cell = [_tableview dequeueReusableCellWithIdentifier:@"conversation"];
-        [cell setDelegate:self];
-        [cell setQNumber:indexPath.section * 2 + indexPath.row];
-        [cell setData:[_conversation objectAtIndex:indexPath.row]];
-        [cell setIndex:indexPath];
-        
-        return cell;
-    }
-    else if (indexPath.section == 3){//short talk
-        TLQuestionTableViewCell *cell = [_tableview dequeueReusableCellWithIdentifier:@"conversation"];
-        [cell setDelegate:self];
-        [cell setQNumber:indexPath.section*2 + indexPath.row + 1];
-        [cell setData:[_talk objectAtIndex:indexPath.row]];
-        [cell setIndex:indexPath];
-        
-        return cell;
-    }
-    
-    return nil;
-}
-
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    //update data
-    AnwserState state = [[uDic objectForKey:indexPath] integerValue];
-    [(TLTableViewCellBase*)cell updateSelection:state];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (indexPath.section == 0) {
-        return 150;
-    }
-    else if (indexPath.section == 1){
-        return 100;
-    }
-    else if (indexPath.section == 2){
-        return 190;
-    }
-    else if (indexPath.section == 3){
-        return 190;
-    }
-    
-    return 150;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 32;
-}
-
-#pragma mark -
-#pragma mark - UITableCellView Delegate
--(void)didSelectAnwser:(AnwserState)anwser forCell:(TLTableViewCellBase *)cell{
-    
-    NSIndexPath *indexpath = [cell index];
-    
-    [uDic setObject:[NSNumber numberWithInteger:anwser] forKey:indexpath];
-}
-
-- (IBAction)showAnwser_Action:(id)sender {
-    [self showAnwser];
-}
-
-#pragma mark - Player Bar Delegate
--(void)didFinishPlayer{
-    
-    //show score
-    NSLog(@"Show score");
-    
-    [self showAnwser];
-}
-
--(void)didClickPlayer
-{
-
-}
-
--(void)canClickPlayer
-{
-    
 }
 @end

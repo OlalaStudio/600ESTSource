@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VR4-lC-FZC" customClass="TLPhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="488"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="488"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="businessplaning.png" translatesAutoresizingMaskIntoConstraints="NO" id="y1N-kl-px1">
+                        <rect key="frame" x="8" y="40" width="319" height="349"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zw-N9-b6T" customClass="TLButton">
+                        <rect key="frame" x="24.5" y="419" width="46" height="44"/>
+                        <state key="normal" image="btAunselect.png"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-fV-49a" customClass="TLButton">
+                        <rect key="frame" x="104.5" y="419" width="46" height="44"/>
+                        <state key="normal" image="btBunselect.png"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXF-Zz-q3w" customClass="TLButton">
+                        <rect key="frame" x="184.5" y="419" width="46" height="44"/>
+                        <state key="normal" image="btCunselect.png"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZp-7w-P4X" customClass="TLButton">
+                        <rect key="frame" x="264.5" y="419" width="46" height="44"/>
+                        <state key="normal" image="btDunselect.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tES-uF-mGU">
+                        <rect key="frame" x="8" y="8" width="319" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-P4-PoK">
+                        <rect key="frame" x="87" y="395" width="26" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrect.png" translatesAutoresizingMaskIntoConstraints="NO" id="BNZ-KG-NAe">
+                        <rect key="frame" x="8" y="400" width="23" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="OZp-7w-P4X" firstAttribute="centerX" secondItem="VR4-lC-FZC" secondAttribute="centerX" constant="120" id="3dI-SK-JFR"/>
+                <constraint firstItem="tES-uF-mGU" firstAttribute="leading" secondItem="VR4-lC-FZC" secondAttribute="leading" constant="8" id="5qx-JF-uqD"/>
+                <constraint firstAttribute="bottom" secondItem="9zw-N9-b6T" secondAttribute="bottom" constant="25" id="6r5-uS-AAq"/>
+                <constraint firstItem="uXF-Zz-q3w" firstAttribute="height" secondItem="9zw-N9-b6T" secondAttribute="height" id="BSi-pA-HRF"/>
+                <constraint firstAttribute="trailing" secondItem="tES-uF-mGU" secondAttribute="trailing" constant="8" id="Dj4-9P-GfH"/>
+                <constraint firstItem="pzb-fV-49a" firstAttribute="width" secondItem="9zw-N9-b6T" secondAttribute="width" id="EdB-Kg-Jrv"/>
+                <constraint firstItem="OZp-7w-P4X" firstAttribute="top" secondItem="y1N-kl-px1" secondAttribute="bottom" constant="30" id="Grc-N5-rSE"/>
+                <constraint firstItem="y1N-kl-px1" firstAttribute="top" secondItem="VR4-lC-FZC" secondAttribute="top" constant="40" id="HeY-fq-MP0"/>
+                <constraint firstItem="OZp-7w-P4X" firstAttribute="width" secondItem="9zw-N9-b6T" secondAttribute="width" id="KMD-1K-09C"/>
+                <constraint firstItem="OZp-7w-P4X" firstAttribute="height" secondItem="9zw-N9-b6T" secondAttribute="height" id="OAa-gZ-Mez"/>
+                <constraint firstItem="uXF-Zz-q3w" firstAttribute="centerX" secondItem="VR4-lC-FZC" secondAttribute="centerX" constant="40" id="Snj-H2-ODa"/>
+                <constraint firstAttribute="bottom" secondItem="uXF-Zz-q3w" secondAttribute="bottom" constant="25" id="Uoo-if-FHI"/>
+                <constraint firstAttribute="trailing" secondItem="y1N-kl-px1" secondAttribute="trailing" constant="8" id="W1y-aD-CPZ"/>
+                <constraint firstAttribute="bottom" secondItem="OZp-7w-P4X" secondAttribute="bottom" constant="25" id="WGS-Pw-oFd"/>
+                <constraint firstItem="y1N-kl-px1" firstAttribute="leading" secondItem="VR4-lC-FZC" secondAttribute="leading" constant="8" id="bEt-70-tpj"/>
+                <constraint firstAttribute="bottom" secondItem="pzb-fV-49a" secondAttribute="bottom" constant="25" id="eyA-tU-L0D"/>
+                <constraint firstItem="tES-uF-mGU" firstAttribute="top" secondItem="VR4-lC-FZC" secondAttribute="top" constant="8" id="hA3-i5-Uge"/>
+                <constraint firstItem="9zw-N9-b6T" firstAttribute="centerX" secondItem="VR4-lC-FZC" secondAttribute="centerX" constant="-120" id="mqD-wv-6mT"/>
+                <constraint firstItem="pzb-fV-49a" firstAttribute="centerX" secondItem="VR4-lC-FZC" secondAttribute="centerX" constant="-40" id="ntj-tQ-fFS"/>
+                <constraint firstItem="uXF-Zz-q3w" firstAttribute="width" secondItem="9zw-N9-b6T" secondAttribute="width" id="rdr-wj-ExP"/>
+                <constraint firstItem="pzb-fV-49a" firstAttribute="height" secondItem="9zw-N9-b6T" secondAttribute="height" id="zzz-Lx-Lnx"/>
+            </constraints>
+            <size key="customSize" width="335" height="488"/>
+            <connections>
+                <outlet property="btA" destination="9zw-N9-b6T" id="Dpb-Vc-UaW"/>
+                <outlet property="btB" destination="pzb-fV-49a" id="pLe-5s-1Lo"/>
+                <outlet property="btC" destination="uXF-Zz-q3w" id="CNi-1E-vbL"/>
+                <outlet property="btD" destination="OZp-7w-P4X" id="0X4-Gg-2l6"/>
+                <outlet property="correcticon" destination="LT8-P4-PoK" id="Sem-th-g4K"/>
+                <outlet property="incorrecticon" destination="BNZ-KG-NAe" id="jY5-S0-4xS"/>
+                <outlet property="lbTitle" destination="tES-uF-mGU" id="NZV-nj-jS1"/>
+                <outlet property="photo" destination="y1N-kl-px1" id="jdR-op-4cG"/>
+            </connections>
+            <point key="canvasLocation" x="-31.5" y="10"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="btAunselect.png" width="46" height="44"/>
+        <image name="btBunselect.png" width="46" height="44"/>
+        <image name="btCunselect.png" width="46" height="44"/>
+        <image name="btDunselect.png" width="46" height="44"/>
+        <image name="businessplaning.png" width="897" height="611"/>
+        <image name="correct.png" width="64" height="70"/>
+        <image name="incorrect.png" width="64" height="70"/>
+    </resources>
+</document>

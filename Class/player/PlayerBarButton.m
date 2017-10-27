@@ -14,7 +14,7 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     
-    _playState = kunknow;
+    _playState = kUnknowState;
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -23,25 +23,25 @@
     // Drawing code
     [super drawRect:rect];
     
-    if (_playState == kunknow || _playState == kPlay) {
-        [self.imageView setImage:[UIImage imageNamed:@"play.png"]];
+    if (_playState == kUnknowState || _playState == kPlayState) {
+        [self.imageView setImage:[UIImage imageNamed:@"play"]];
     }
     else{
-        [self.imageView setImage:[UIImage imageNamed:@"pause.png"]];
+        [self.imageView setImage:[UIImage imageNamed:@"pause"]];
     }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    if (_playState == kunknow || _playState == kPlay) {
-        _playState = kPause;
+    if (_playState == kUnknowState || _playState == kPlayState) {
+        _playState = kPauseState;
         
         if (_playDelegate) {
             [_playDelegate play];
         }
     }
     else{
-        _playState = kPlay;
+        _playState = kPlayState;
         
         if (_playDelegate) {
             [_playDelegate pause];
@@ -49,16 +49,6 @@
     }
     
     [self setNeedsDisplay];
-}
-
--(void)setPlayState:(State)playState{
-    _playState = playState;
-    
-    [self setNeedsDisplay];
-}
-
--(State)playState{
-    return _playState;
 }
 
 @end

@@ -8,101 +8,82 @@
 
 #import "PlayerBarView.h"
 
-static void *MyStreamingMovieViewControllerTimedMetadataObserverContext = &MyStreamingMovieViewControllerTimedMetadataObserverContext;
-static void *MyStreamingMovieViewControllerRateObservationContext = &MyStreamingMovieViewControllerRateObservationContext;
-static void *MyStreamingMovieViewControllerCurrentItemObservationContext = &MyStreamingMovieViewControllerCurrentItemObservationContext;
-static void *MyStreamingMovieViewControllerPlayerItemStatusObserverContext = &MyStreamingMovieViewControllerPlayerItemStatusObserverContext;
-
-NSString *kTracksKey		= @"tracks";
-NSString *kStatusKey		= @"status";
-NSString *kRateKey			= @"rate";
-NSString *kPlayableKey		= @"playable";
-NSString *kCurrentItemKey	= @"currentItem";
-NSString *kTimedMetadataKey	= @"currentItem.timedMetadata";
-
-@implementation PlayerBarView
+@implementation PlayerBarView{
+    NSTimer *localTimer;
+}
 @synthesize playerURL = _playerURL;
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-//- (void)drawRect:(CGRect)rect {
-//    // Drawing code
-//    
-//    [super drawRect:rect];
-//}
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+    
+    [super drawRect:rect];
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:4.0];
+    
+    UIColor *color = [UIColor colorWithRed:0.61 green:0.67 blue:0.45 alpha:0.6];
+    [color setFill];
+    [path fill];
+}
 
 -(void)awakeFromNib{
-    [self disablePlayerBar];
+    [super awakeFromNib];
+    
+    [_playbutton setPlayDelegate:self];
+    [_txtCurrentTime setText:@"00:00"];
 }
 
 -(void)stop
 {
-    if (playerItem) {
-        
-        if ([player status] == AVPlayerStatusReadyToPlay) {
-            [playerItem removeObserver:self forKeyPath:kStatusKey];
+    if (_category == kCategory_Internet) {
+        if (_internetPlayer) {
+            
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+            [_internetPlayer removeObserver:self forKeyPath:@"status"];
+            
+            [_internetPlayer pause];
+            _internetPlayer = nil;
         }
-        
-        if ([(NSDictionary*)[[NSNotificationCenter defaultCenter] observationInfo] valueForKey:AVPlayerItemDidPlayToEndTimeNotification]) {
-            [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:AVPlayerItemDidPlayToEndTimeNotification context:(__bridge void *)(playerItem)];
-        }
-        
-        playerItem = nil;
+    }
+    else{
+        [_audioPlayer stop];
     }
     
-    [self removePlayerTimeObserver];
-    
-    if (player) {
-        [player pause];
-        player = nil;
-    }
+    [localTimer invalidate];
 }
 
 -(void)dealloc
 {
-    if (playerItem) {
+    if (_internetPlayer) {
         
-        if ([player status] == AVPlayerStatusReadyToPlay) {
-            [playerItem removeObserver:self forKeyPath:kStatusKey];
-        }
-
-        if ([(NSDictionary*)[[NSNotificationCenter defaultCenter] observationInfo] valueForKey:AVPlayerItemDidPlayToEndTimeNotification]) {
-            [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:AVPlayerItemDidPlayToEndTimeNotification context:(__bridge void *)(playerItem)];
-        }
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+        [_internetPlayer removeObserver:self forKeyPath:@"status"];
         
-        playerItem = nil;
-    }
-    
-    [self removePlayerTimeObserver];
-    
-    if (player) {
-        [player pause];
-        player = nil;
+        [_internetPlayer pause];
+        _internetPlayer = nil;
     }
 }
 
 -(void)loadContent{
     
-    Reachability *network = [Reachability reachabilityWithHostName:@"https://github.com"];
-    
-    if ([network currentReachabilityStatus] != NotReachable) {
+    if (_category == kCategory_Internet) {
         
-        NSURL *streamURL = [NSURL URLWithString:_playerURL];
-        if ([streamURL scheme]) {
-            AVURLAsset *asset = [AVURLAsset URLAssetWithURL:streamURL options:nil];
-            NSArray *requestedKeys = [NSArray arrayWithObjects:kTracksKey, kPlayableKey, nil];
-
-            [asset loadValuesAsynchronouslyForKeys:requestedKeys completionHandler:
-             ^{
-                 dispatch_async(dispatch_get_main_queue(),
-                                ^{
-                                    [self prepareToPlayAsset:asset withKeys:requestedKeys];
-                                });
-             }];
+        Reachability *network = [Reachability reachabilityWithHostName:@"https://github.com"];
+        if ([network currentReachabilityStatus] != NotReachable) {
+            [_playbutton setEnabled:YES];
+        }
+        else{
+            [self showNetworkError];
+            [_playbutton setEnabled:NO];
         }
     }
     else{
-        [self showNetworkError];
+        NSURL *soundFileURL = [NSURL fileURLWithPath:_playerURL];
+        
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:NULL];
+        [_audioPlayer setDelegate:self];
+        [_audioPlayer setVolume:1.0];
     }
 }
 
@@ -116,144 +97,88 @@ NSString *kTimedMetadataKey	= @"currentItem.timedMetadata";
     [alert show];
 }
 
-- (void)prepareToPlayAsset:(AVURLAsset *)asset withKeys:(NSArray *)requestedKeys{
+-(void)didReachtoEnd{
     
-    playerItem = [AVPlayerItem playerItemWithAsset:asset];
-    
-    [playerItem addObserver:self
-                 forKeyPath:kStatusKey
-                    options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
-                    context:MyStreamingMovieViewControllerPlayerItemStatusObserverContext];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playeritemDidReachtoEnd:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:playerItem];
-    
-    if (!player) {
-        player = [AVPlayer playerWithPlayerItem:playerItem];
+    if (_category == kCategory_Internet) {
+
+        [_internetPlayer seekToTime:CMTimeMakeWithSeconds(0, NSEC_PER_SEC)];
     }
-}
-
--(void)assetFailedToPrepareForPlayback:(NSError *)error
-{
-    [self removePlayerTimeObserver];
-    [self disablePlayerBar];
-    
-    /* Display the error. */
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
-                                                        message:[error localizedFailureReason]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    [alertView show];
-}
-
--(CMTime)Streamduration{
-    AVPlayerItem *item = [player currentItem];
-    if (item.status == AVPlayerStatusReadyToPlay) {
-        return item.duration;
+    else{
+        
     }
     
-    return kCMTimeInvalid;
-}
-
--(void)enablePlayerBar{
-    [_playbutton setEnabled:YES];
-    [_timeSlider setEnabled:YES];
+    [_playbutton setPlayState:kPlayState];
+    [_playbutton setNeedsDisplay];
     
-    [_playbutton setPlayDelegate:self];
+    [self resetProgressBar];
     
+    //callback for check score
     if (_playerBarDelegate) {
-        [_playerBarDelegate canClickPlayer];
+        [_playerBarDelegate didFinishPlayer:_category];
     }
 }
 
--(void)disablePlayerBar{
-    [_playbutton setEnabled:NO];
-    [_timeSlider setEnabled:NO];
-}
+#pragma mark - Update Progress
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if (context == MyStreamingMovieViewControllerPlayerItemStatusObserverContext){
-        
-        AVPlayerStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
-        
-        switch (status) {
-            case AVPlayerStatusUnknown:
-            {
-                NSLog(@"AVPlayerStatusUnknown");
-            }
-                break;
-            case AVPlayerStatusReadyToPlay:
-            {
-                NSLog(@"AVPlayerStatusReadyToPlay");
-                [self enablePlayerBar];
-                [self initScrubberTimer];
-            }
-                break;
-            case AVPlayerStatusFailed:
-            {
-                NSLog(@"AVPlayerStatusFailed");
-                AVPlayerItem *thePlayerItem = (AVPlayerItem *)object;
-                [self assetFailedToPrepareForPlayback:thePlayerItem.error];
-            }
-                break;
-            default:
-                break;
-        }
-    }
-}
-
-#pragma mark Scrubber control
--(void)initScrubberTimer
-{
-    double interval = .1f;
+-(void)initProgressBar{
     
-    CMTime playerDuration = [self Streamduration];
-    if (CMTIME_IS_INVALID(playerDuration))
-    {
-        return;
+    double duration;
+    
+    if (_category == kCategory_Internet) {
+        duration = CMTimeGetSeconds(_internetPlayer.currentItem.asset.duration);
+    }
+    else{
+        duration = [_audioPlayer duration];
     }
     
-    double duration = CMTimeGetSeconds(playerDuration);
     [_timeSlider setMaximumValue:duration];
     [_timeSlider setMinimumValue:0];
+    [_timeSlider setValue:[_audioPlayer currentTime]];
+}
+
+-(void)resetProgressBar{
+    if (_category == kCategory_Internet) {
+        
+    }
+    else{
+        
+    }
+    
     [_timeSlider setValue:0];
-    
-    NSLog(@"duration : %f",duration);
-    
-    /* Update the scrubber during normal playback. */
-    timeObserver = [player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(interval, NSEC_PER_SEC)
-                                                        queue:NULL
-                                                   usingBlock:^(CMTime time) {
-                                                       [self syncScrubber];
-                                                   }];
 }
 
-- (void)syncScrubber
-{
-    CMTime playerDuration = [self Streamduration];
-    if (CMTIME_IS_INVALID(playerDuration))
-    {
-        return;
+-(void)updateAudioProgress{
+    if (_category == kCategory_Internet) {
+        double currentTime = CMTimeGetSeconds(_internetPlayer.currentItem.currentTime);
+        
+        [_timeSlider setValue:currentTime];
+        
+        NSUInteger durationSeconds = currentTime;
+        NSUInteger minutes = floor(durationSeconds % 3600 / 60);
+        NSUInteger seconds = floor(durationSeconds % 3600 % 60);
+        NSString *time = [NSString stringWithFormat:@"%02ld:%02ld", (unsigned long)minutes, seconds];
+        
+        [_txtCurrentTime setText:time];
+        
+        //callback for update progress
+        if (_playerBarDelegate) {
+            [_playerBarDelegate didUpdateCurrentTime:currentTime];
+        }
     }
-    
-    double duration = CMTimeGetSeconds(playerDuration);
-    if (isfinite(duration) && (duration > 0))
-    {
-        double time = CMTimeGetSeconds([player currentTime]);
-        [_timeSlider setValue:time];
-    }
-}
-
--(void)removePlayerTimeObserver
-{
-    if (timeObserver)
-    {
-        [player removeTimeObserver:timeObserver];
-        timeObserver = nil;
+    else{
+        [_timeSlider setValue:[_audioPlayer currentTime]];
+        
+        NSUInteger durationSeconds = [_audioPlayer currentTime];
+        NSUInteger minutes = floor(durationSeconds % 3600 / 60);
+        NSUInteger seconds = floor(durationSeconds % 3600 % 60);
+        NSString *time = [NSString stringWithFormat:@"%02ld:%02ld", (unsigned long)minutes, seconds];
+        
+        [_txtCurrentTime setText:time];
+        
+        //callback for update progress
+        if (_playerBarDelegate) {
+            [_playerBarDelegate didUpdateCurrentTime:[_audioPlayer currentTime]];
+        }
     }
 }
 
@@ -261,35 +186,107 @@ NSString *kTimedMetadataKey	= @"currentItem.timedMetadata";
 -(void)playeritemDidReachtoEnd:(NSNotification*)notification{
     NSLog(@"end of audio");
     
-    [_playbutton setPlayState:kPlay];
-    [_playbutton setNeedsDisplay];
-    
-    [player seekToTime:CMTimeMakeWithSeconds(0, NSEC_PER_SEC)];
-    
-    //callback for check score
-    if (_playerBarDelegate) {
-        [_playerBarDelegate didFinishPlayer];
-    }
+    [self didReachtoEnd];
 }
-
 
 #pragma mark - Play Button delegate
 -(void)play{
-    [player play];
-    [_playbutton setPlayState:kPause];
     
-    //callback for show result
-    if (_playerBarDelegate) {
-        [_playerBarDelegate didClickPlayer];
+    if (_category == kCategory_Internet) {
+        
+        if (!_internetPlayer) {
+            AVPlayer *player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:_playerURL]];
+            self.internetPlayer = player;
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(playerItemDidReachEnd:)
+                                                         name:AVPlayerItemDidPlayToEndTimeNotification
+                                                       object:[self.internetPlayer currentItem]];
+            
+            _internetPlayerItem = [self.internetPlayer currentItem];
+            [self.internetPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+            localTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateAudioProgress) userInfo:nil repeats:YES];
+            
+            [self.internetPlayer play];
+            
+            //callback for show loading
+            if (_playerBarDelegate && [_playerBarDelegate respondsToSelector:@selector(didClickPlayer:)]) {
+                [_playerBarDelegate didClickPlayer:_category];
+            }
+        }
+        else{
+            [_internetPlayer play];
+            
+            //callback for show loading
+            if (_playerBarDelegate && [_playerBarDelegate respondsToSelector:@selector(didClickReplayPlayer:)]) {
+                [_playerBarDelegate didClickReplayPlayer:_category];
+            }
+        }
+        
+    }
+    else{
+        [self initProgressBar];
+        
+        [_audioPlayer prepareToPlay];
+        [_audioPlayer play];
+        
+        localTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateAudioProgress) userInfo:nil repeats:YES];
+        
+        //callback for show loading
+        if (_playerBarDelegate) {
+            [_playerBarDelegate didClickPlayer:_category];
+        }
     }
 }
 
 -(void)pause{
-    [player pause];
-    [_playbutton setPlayState:kPlay];
+    if (_category == kCategory_Internet) {
+        [_internetPlayer pause];
+    }
+    else{
+        [_audioPlayer pause];
+    }
 }
 
-#pragma mark - UINavigationBar
+#pragma mark - AVAudioPlayerDelegate - Local
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    [self didReachtoEnd];
+}
 
+#pragma mark - AVAudioPlayerDelegate - Internet
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    if (object == self.internetPlayer && [keyPath isEqualToString:@"status"]) {
+        
+        [_playbutton setPlayState:kPlayState];
+        
+        BOOL readytoplay = NO;
+        
+        if (self.internetPlayer.status == AVPlayerStatusFailed) {
+            NSLog(@"AVPlayer Failed");
+            
+        } else if (self.internetPlayer.status == AVPlayerStatusReadyToPlay) {
+            NSLog(@"AVPlayerStatusReadyToPlay");
+            
+            [self initProgressBar];
+            [_playbutton setPlayState:kPauseState];
+            
+            readytoplay = YES;
+            
+        } else if (self.internetPlayer.status == AVPlayerItemStatusUnknown) {
+            NSLog(@"AVPlayer Unknown");
+        }
+        
+        //callback for show result
+        if (_playerBarDelegate) {
+            [_playerBarDelegate didReadyPlayer:_category ready:readytoplay];
+        }
+    }
+}
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    
+    //  code here to play next sound file
+    [self didReachtoEnd];
+}
 
 @end
